@@ -1,0 +1,33 @@
+//Login page
+$txt_UserName="Username";
+$txt_Password="Password";
+$btn_Login="Log in";
+
+//12Twenty Reports
+$tab_12twenty_Reports="12Twenty Reports";
+//Select Filter Data
+$default_gradYear1="2017";
+$drp_dwn_gradclass="multiselect dropdown-toggle btn btn-default";
+$drp_dwn_gradYear="GraduationYearId";
+$drp_dwn_gradTerm="GraduationTermId";
+$drp_dwn_offerTimingId="OfferTimingId";
+$drp_dwn_job_PhaseId="JobPhaseId";
+$drp_dwn_workAuthId="ConsolidatedWorkAuthorizationId";
+$drp_dwn_desirInd="ConsolidatedIndustryId";
+$drp_dwn_rumorJob="RumorJobOption";
+$drp_dwn_includeReport="OutcomeInclusionId";
+$drp_dwn_degreeId="DegreeLevelId";
+$drp_dwn_collegeId="CollegeId";
+$drp_dwn_department="DepartmentId";
+$drp_dwn_underGradMajor="UndergradMajorId";
+$drp_dwn_program="ProgramId";
+$drp_dwn_mbaclass="DepartmentId";       
+$drp_dwn_jointdegree="HasJointDegree";       
+$drp_dwn_surveyperiod="SurveyPeriodId";   
+$drp_dwn_desirEmp="ConsolidatedEmploymentTypeId";
+$getResult="Get Results";
+$generateReport="Generate Report";
+
+//Table info
+$table_id = "report-data";
+$total_response=0;

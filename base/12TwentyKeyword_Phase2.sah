@@ -1,0 +1,2586 @@
+ /***************************************
+	FileName	:	12TwentyKeyword_Phase2.sah
+	Description	 :   Global Variables,Testcase Functions 
+***************************************/
+
+_include("12TwentyOR_Phase2.sah");
+_include("12TwentyConfig_Phase2.sah");
+
+/**********************************************
+    Method name	 :  loginTo12Twenty
+    Author 	 	     :	venu
+    Created Date  :  2/8/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Login to 12Twenty
+function loginTo12Twenty($Url,$Username, $Password){
+   //Navigate to URL
+  	_navigateTo($Url);
+ 	//Read User Name 
+	_setValue(_emailbox($txt_UserName), $Username);
+  //Read Password
+	_setValue(_password($txt_Password), $Password);
+   //Click Submit Button
+	_click(_link($btn_Login));
+}
+/**************************Custom Reports*********************************/
+
+var $sRunStatus;
+var $sSite;
+var $sReportName;
+var $sDatafileName;
+
+//StudentTools
+var $sAttribute;
+var $sSub_Attr;
+var $sSchool;
+var $sProgram;
+var $sJob;
+var $sPay;
+var $sPayPeriode; 
+var $sGradYear; 
+var $sOfferStatus; 
+var $sExcludeSponser; 
+var $sSort;
+var $Tabledata=[];
+var $arr=[];
+/**********************************************
+    Method name	 :  Customreports_Baseline
+    Author 	 	     :	venu
+    Created Date  :  5/27/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Customreports_Baseline($sRunStatus, $sSite, $sReportName,$sSubReport, $sDatafileName10)
+{
+	 _continueOnError();   
+  
+    //Sections of script,marked as a separate test case
+    var $t = _testcase($sDatafileName10, "Customreports Baseline Test");
+    //Start of "marked as a separate test case"
+	$t.start();      
+    //Condition for Runstatus
+    if($sRunStatus==$sRunStatusValue){
+      //Condition for Siteinstance
+      if($sSite==$sSiteName2)
+      {    
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);        
+        	//click on Reports
+        	//_click(_link($link_reports));
+        	//click on Custom reports
+            _wait(5000);
+        	_click(_link($link_CustRepo));
+           _wait(5000);
+        	//click on SubReport name
+        	_click(_link($sSubReport));
+           _wait(1500);
+        	$sDatafileName = $sDatafileName10;
+        if(_exists(_div("num-results ng-binding"))){
+        	 var $str;
+      		$str=_getText(_div("num-results ng-binding"));
+      		$str_array=[[$str]];
+     		 _writeCSVFile($str_array,$path_baseline+$sDatafileName+".csv");
+        }
+        	//Write into CSV
+        	WriteToCSV($sDatafileName);
+     
+      }
+      _log("1220 Reports Baseline Test-Passed");      
+    }
+    else
+    {
+     	_log("1220 Reports Baseline Test-Failed");
+    } 
+   //End of "marked as a separate test case" 
+   $t.end();   
+}
+/**********************************************
+    Method name	 :  Customreports_Actual
+    Author 	 	     :	venu
+    Created Date  :  5/27/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Customreports_Actual($sRunStatus, $sSite, $sReportName,$sSubReport, $sDatafileName10)
+{
+	 _continueOnError();   
+  
+    //Sections of script,marked as a separate test case
+    var $t = _testcase($sDatafileName10, "Customreports Baseline Test");
+    //Start of "marked as a separate test case"
+	$t.start();      
+    //Condition for Runstatus
+    if($sRunStatus==$sRunStatusValue){
+      //Condition for Siteinstance
+      if($sSite==$sSiteName2)
+      {    
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);        
+        	//click on Reports
+        	//_click(_link($link_reports));
+        	//click on Custom reports
+        	_wait(1500);
+        	_click(_link($link_CustRepo));
+         	_wait(10000);
+        	//click on SubReport name
+        	_click(_link($sSubReport));
+           _wait(2000);
+        	$sDatafileName = $sDatafileName10;
+          if(_exists(_div("num-results ng-binding")))
+		{
+      		_log("Custom reports temp count");
+	          var $str;
+	          $str=_getText(_div("num-results ng-binding"));
+	          $str_array=[[$str]];
+	          _writeCSVFile($str_array,$path_temp+$sDatafileName+".csv");
+	  	} 
+         //get table content from ui
+		$Tabledata = _getTableContents(_table($table_id));
+
+        //push data into array
+//        for (var $row = 0; $row < $Tabledata.length; $row++) 
+//        {
+//            //assign table data into an array length
+//            $arr[$arr.length] = $Tabledata[$row];
+//        }
+        //write functionality
+        _writeCSVFile($Tabledata,$path_temp+$sDatafileName+".csv");
+                //Verify CSV
+                readTempCSVAndVerify($sDatafileName);
+
+          }
+      _log("1220 Reports Baseline Test-Passed");      
+    }
+    else
+    {
+     	_log("1220 Reports Baseline Test-Failed");
+    } 
+   //End of "marked as a separate test case" 
+   $t.end();   
+}
+
+
+/**********************************************
+    Method name	 :  StudentTools_Baseline
+    Author 	 	     :	venu
+    Created Date  :  2/12/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Student view baseline
+function StudentTools_Baseline($sRunStatus, $sSite, $sReportName, $sAttribute9, $sSub_Attr9, $sSchool9, $sProgram9, $sJob9, $sPay9, 
+                               					$sPayPeriode9, $sGradYear9, $sOfferStatus9, $sExcludeSponser9, $sSort9, $sDatafileName9)
+{
+  //continue the script execution if failure occurs
+  _continueOnError();   
+     //Read Filter value
+    //Sections of script,marked as a separate test case 
+    var $t = _testcase($sDatafileName9, "Student Tools");
+    //Start of "marked as a separate test case"
+	$t.start();     
+    //Condition for Runstatus 
+    if($sRunStatus==$sRunStatusValue){
+      //Condition for siteinstance
+      if($sSite==$sSiteName2){
+        
+        $sAttribute=$sAttribute9;
+         $sSub_Attr=$sSub_Attr9;
+         $sSchool=$sSchool9;
+         $sProgram=$sProgram9;
+         $sJob=$sJob9;
+         $sPay=$sPay9;
+         $sPayPeriode=$sPayPeriode9;
+         $sGradYear=$sGradYear9;
+         $sOfferStatus=$sOfferStatus9;
+         $sExcludeSponser=$sExcludeSponser9;
+         $sSort=$sSort;
+         $sDatafileName=$sDatafileName9;
+        //Condition for sub report
+        if($sReportName==$sReport1)
+       {	
+         	loginTo12Twenty($Url_George,$sUsr, $sPasw);
+         	//click on student view
+         	 _click(_link($link_StdView));
+         	//click on report name
+        	 _click(_link($sReportName));
+         	//click on change link
+         	_click(_link($link_Change));
+         	//read filter data
+          	FilterData_Georgetown($sAttribute, $sSub_Attr, $sSchool, $sProgram, $sJob, $sPay, $sPayPeriode, $sGradYear, $sOfferStatus, 
+                                  				$sExcludeSponser, $sSort, $sDatafileName);
+         	//write student viw results into CSV
+        	Writetocsv_GeorgeOutcome($sDatafileName);
+    	
+       }
+       else{
+         	loginTo12Twenty($Url_George,$sUsr, $sPasw);          
+         	//click on student view
+        	_click(_link($link_StdView));
+         	//click on report name
+			_click(_link($sReportName));
+			//_click(_link($link_change_salary));
+         	//read filter data
+        	FilterData_Georgetown($sAttribute, $sSub_Attr, $sSchool, $sProgram, $sJob, $sPay, $sPayPeriode, $sGradYear, $sOfferStatus, 
+                                  				$sExcludeSponser, $sSort, $sDatafileName);
+         	//write results into csv
+        	WriteToCSV_GeorgeSalary($sDatafileName);
+      }
+    }
+  }   
+    //End of "marked as a separate test case"
+    $t.end();      
+}
+/**********************************************
+    Method name	 :  Georgetown_Actual
+    Author 	 	     :	venu
+    Created Date  :  2/12/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Student view Actual
+function StudentTools_Actual($sRunStatus, $sSite, $sReportName, $sAttribute9, $sSub_Attr9, $sSchool9, $sProgram9, $sJob9, $sPay9, 
+                               					$sPayPeriode9, $sGradYear9, $sOfferStatus9, $sExcludeSponser9, $sSort9, $sDatafileName9)
+{
+ 
+  //continue the script execution if failure occurs
+  _continueOnError();   
+    //Sections of script,marked as a separate test case
+    var $t = _testcase($sDatafileName9, "Student Tools Actual");
+    //Start of "marked as a separate test case"
+	$t.start();     
+    //Condition for Runstatus
+    if($sRunStatus==$sRunStatusValue){
+      //Condition for siteinstance
+      if($sSite==$sSiteName2)
+      {
+       	 $sAttribute=$sAttribute9;
+         $sSub_Attr=$sSub_Attr9;
+         $sSchool=$sSchool9;
+         $sProgram=$sProgram9;
+         $sJob=$sJob9;
+         $sPay=$sPay9;
+         $sPayPeriode=$sPayPeriode9;
+         $sGradYear=$sGradYear9;
+         $sOfferStatus=$sOfferStatus9;
+         $sExcludeSponser=$sExcludeSponser9;
+         $sSort=$sSort;
+         $sDatafileName=$sDatafileName9;
+        //Condition for sub report
+      	if($sReportName==$sReport1)
+       {	
+         	loginTo12Twenty($Url_George,$sUsr, $sPasw);
+         	//click on student view
+         	 _click(_link($link_StdView));
+         	//click on report name
+        	 _click(_link($sReportName));
+         	//click on change link
+         	_click(_link($link_Change));
+         	//read filter data
+          	FilterData_Georgetown($sAttribute, $sSub_Attr, $sSchool, $sProgram, $sJob, $sPay, $sPayPeriode, $sGradYear, $sOfferStatus, 
+                                  				$sExcludeSponser, $sSort, $sDatafileName);
+         	//verify student view baseline and actual results
+        	readFromCSVAndVerify_Outcome($sDatafileName);
+
+       }
+       else{
+         	loginTo12Twenty($Url_George,$sUsr, $sPasw);          
+         	//click on student view
+        	_click(_link($link_StdView));
+         	//click on report name
+			_click(_link($sReportName));
+			//_click(_link($link_change_salary));
+         	//read filter data
+        	FilterData_Georgetown($sAttribute, $sSub_Attr, $sSchool, $sProgram, $sJob, $sPay, $sPayPeriode, $sGradYear, $sOfferStatus, 
+                                  				$sExcludeSponser, $sSort, $sDatafileName);
+         	//Write results into temporary file 
+			WriteToTempCSV_GeorgeSalary($sDatafileName);
+         	//verify results
+         	readTempCSVAndVerify($sDatafileName);
+      }
+        if(_fileExists($path_actual+$sDatafileName+".csv"))
+        {
+          
+          _writeFile("\n @Fiter Values@"+"\n Attribute:"+$sAttribute+","+"\n Sub Attribute:"+$sSub_Attr+","+"\n School:"+$sSchool+","+"Program:"+$sProgram+","+
+                     "\n Job:"+$sJob+","+"\n Pay type:"+$sPay+","+"Pay periode:"+$sPayPeriode+","+"\n Graduation Year:"+$sGradYear+","+
+                     "\n Offer status:"+$sOfferStatus+","+"Exclude sponser:"+$sExcludeSponser+","+"Sort:"+$sSort+","+
+                     "\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+        }     
+     }
+   }
+   //End of "marked as a separate test case"  
+   $t.end();          
+  }  
+/**********************************************
+    Method name	 :  WriteToCSV_GeorgeSalary
+    Author 	 	     :	venu
+    Created Date  :  2/15/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function  WriteToCSV_GeorgeSalary($sDatafileName){
+  
+if(_exists($path_baseline+$sDatafileName+".csv"))
+   {	//if exists delete file
+     _deleteFile($path_baseline+$sDatafileName+".csv");	
+   }	
+    //get table content from ui
+	$Tabledata = _getTableContents(_table($table_id_salarydb1));
+    //push data into array
+    for (var $row = 0; $row < $Tabledata.length; $row++) 
+    {
+      	//assign table data into an array length
+      	$arr[$arr.length] = $Tabledata[$row];
+    }
+  	_log($Tabledata);
+    //write in to csv file
+    _writeCSVFile($Tabledata,$path_baseline+$sDatafileName+".csv");
+  $Tabledata = _getTableContents(_table($table_id_salarydb2));
+    //push data into array
+    for (var $row = 0; $row < $Tabledata.length; $row++) 
+    {
+      	//assign table data into an array length
+      	$arr[$arr.length] = $Tabledata[$row];
+    }
+  _log($Tabledata);
+    //write in to csv file
+    _writeCSVFile($Tabledata,$path_baseline+$sDatafileName+".csv");
+  
+  $Tabledata = _getTableContents(_table($table_id_salarydb3));
+    //push data into array
+    for (var $row = 0; $row < $Tabledata.length; $row++) 
+    {
+      	//assign table data into an array length
+      	$arr[$arr.length] = $Tabledata[$row];
+    }
+    //write in to csv file
+    _writeCSVFile($Tabledata,$path_baseline+$sDatafileName+".csv");
+}  
+/**********************************************
+    Method name	 :  FilterData_Georgetown(Student Tools)
+    Author 	 	     :	venu
+    Created Date  :  2/12/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//pass values to student view filters
+function FilterData_Georgetown($sAttribute, $sSub_Attr, $sSchool, $sProgram, $sJob, $sPay, $sPayPeriode, $sGradYear, $sOfferStatus, 
+                               					$sExcludeSponser, $sSort, $sDatafileName){  
+  	if(_areEqual($sReportName,$sReport1))
+    {
+  		//click on attribute
+  		_click(_link($sAttribute));      
+    } 
+  	//condition for select salary database
+  	if(_areEqual($sReportName,$sReport2)){
+      _log($sReportName);
+      	//select drop down attribute value
+  		_setSelected(_select($drpdwn_AttrType), $sSub_Attr);
+ 	 }
+  //fix the filter value
+ // _click(_div($filters_fix));
+ //pass value to school/network filter   
+  _setSelected(_select($drpdwn_sdataSharing),$sSchool);
+ //pass value to program filter  
+  _setSelected(_select($drpdwn_PrgId), $sProgram);
+  //pass value to job phase filter
+  _setSelected(_select($drpdwn_JobId), $sJob);
+  //pass value to pay type filter
+  _setSelected(_select($drpdwn_PayCatg), $sPay);
+  _wait(5000);
+  //condition for select outcome index
+  if($sReportName==$sReport1){
+	//pass value to pay periode    
+  _setSelected(_select($drpdwn_Peryear), $sPayPeriode);
+ //pass value to sort filter	    
+  _setSelected(_select($drpdwn_Sort), $sSort);	 
+    _wait(5000);
+  }   
+  //condition for select slary database
+  if($sReportName==$sReport2){
+    //pass value to pay periode
+    _setSelected(_select($drpdwn_Peryear_salary),$sPayPeriode);
+	}
+  //pass value to graduation year filter
+  _setSelected(_select($drpdwn_GradYearId), $sGradYear);
+  //pass value to offer status filter
+  _setSelected(_select($drpdwn_JobStatus), $sOfferStatus);
+  //pass value to excluded sponser filter
+  _setSelected(_select($drpdwn_ExcludeSponsers), $sExcludeSponser);
+  //fix filter values
+  _click(_div($floating_filterfix));
+ //click on submit button
+ _click(_button($btn_Result));
+}
+	/***********Resumes***********************/
+//Resumes Gloabl Variables
+var	$sStdGrp;
+var $sSearch;
+var	$sDesirInd;
+var $sDesirFunc;
+var	$sDesirCity;
+var	$sExp;
+var $ExpSub;
+var	$sInd;
+var $sIndSub;
+var $sFunc;
+var $sFuncSub;
+var $sLangSpoke;
+var $sLangSpokeSub;
+var $sLangWrit;
+var $sLangWritSub;
+var $sUpload;
+/**********************************************
+    Method name	 :  Resumes_Filters
+    Author 	 	     :	venu
+    Created Date  :  2/10/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Pass the Resumes filter values to applicatino
+function Resumes_Filters($sReportName, $sStdGrp, $sSearch, $sDesirInd, $sDesirFunc, $sDesirCity, $sExp, $sInd, $sFunc, $sLangSpoke, $sLangWrit, $sUpload, $sDatafileName){
+  _log("Filter data ReportName-" + $sReportName+ "Studnt group-" + $sStdGrp +" Search-" + $sSearch +"DesirInd-" + $sDesirInd+ "DesirFunc-" + $sDesirFunc + 
+       "DesirCity-" +$sDesirCity + "Exp-" +$sExp + "Ind-"+ $sInd + "Func-"+$sFunc +"spoke-"+ $sLangSpoke+ "Write-"+ $sLangWrit + 
+       "Upload-"+$sUpload+"data file-"+ $sDatafileName);
+//click on CSM  
+//_click(_link($link_csm));
+//Click on Resumes  
+_click(_link($link_resumes)); 
+_wait(30000);  
+//condition for Student group default value is "All" 
+if($sStdGrp==$sbtn_Resume){
+  		 //if All	
+  		_log("Select Default Filter");
+  	}else{
+      	// click on Student group button
+        _click(_button($btn_Resu_Stdgrp));
+      	//select the check box
+       _click(_checkbox(0,_near(_label($sStdGrp))),$btn_CTRL);
+  }  
+//Pass the keyword search
+_setValue(_textbox($sResumeSearch), $sSearch);
+//Pass the value to desired industry filter
+_setSelected(_select($sDesirdInd), $sDesirInd);
+//Pass the value to desired function filter   
+_setSelected(_select($sDesirdFunct), $sDesirFunc);
+//Pass the textbox value to desired city filter  
+_setValue(_textbox($sDesirdCit), $sDesirCity);
+//condition for Experience default value is "All"   
+if($sExp==$sbtn_Resume){
+  		_log("Select Default Filter"); 
+  	}else{
+      	//click on Experience button
+        _click(_button($btn_Resu_Exp));
+		var $exp=$sExp.split("|");
+      //read the number of filter	
+      for(var $i=0;$i< $exp.length;$i++){
+       //click on chcek box 	
+      _click(_checkbox(0,_near(_label($exp[$i]))),$btn_CTRL);
+	}
+  }
+//condition for Industry default value is All
+if($sInd==$sbtn_Resume){
+  		_log("Select Default Filter");
+  	}else{
+      //click on Industry button
+       _click(_button($btn_Resu_Ind));
+	  	var $ind=$sInd.split("|");
+      //read the number of filter	
+      for(var $i=0;$i< $ind.length;$i++){
+      //click on chcek box  
+      _click(_checkbox(0,_near(_label($ind[$i]))),$btn_CTRL);
+	}
+  }  
+//condition for Function default value is All
+if($sFunc==$sbtn_Resume){
+  		_log("Select Default Filter");
+  	}else{
+      //click on Function button
+      _click(_button($btn_Resu_Func));
+      //read the number of filter
+	  	var $func=$sFunc.split("|");
+      for(var $i=0;$i< $func.length;$i++){
+       //click on chcek box 
+      _click(_checkbox(0,_near(_label($func[$i]))),$btn_CTRL);
+	}
+  }    
+//condition for LanguageSpoke default value is All
+if($sLangSpoke==$sbtn_Resume){
+  		_log("Select Default Filter");
+  	}else{
+      	//click on Language spoke button
+        _click(_button($btn_Resu_LabgSpok));
+		var $spoke=$sLangSpoke.split("|");
+      //read the number of filter
+      for(var $i=0;$i< $spoke.length;$i++){
+        //click on chcek box
+      _click(_checkbox(0,_near(_label($spoke[$i]))),$btn_CTRL);
+	}
+  }    
+//condition for LanguageWrite default value is All
+if($sLangWrit==$sbtn_Resume){
+  		_log("Select Default Filter");
+  	}else{
+      //click on LanguageWrite button
+        _click(_button($btn_Resu_LangWrit));
+		var $writ=$sLangWrit.split("|");
+      //read the number of filter
+      for(var $i=0;$i< $writ.length;$i++){
+        //click on chcek box
+      _click(_checkbox(0,_near(_label($writ[$i]))),$btn_CTRL);
+	}
+  }      
+//Pass the ResumeUpload value yes/no
+_setSelected(_select($sResumeUpl),$sUpload);
+//click on Generate Results  
+_click(_submit($btn_resumeResults));  
+}
+/**********************************************
+    Method name	 :  Resumes_Baseline
+    Author 	 	     :	venu
+    Created Date  :  2/10/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Resumes Baseline 
+function Resumes_Baseline ($sRunStatus, $sSite, $sReportName8, $sStdGrp8, $sSearch8, $sDesirInd8, $sDesirFunc8, $sDesirCity8, $sExp8, 
+                           					$sInd8, $sFunc8, $sLangSpoke8, $sLangWrit8, $sUpload8, $sDatafileName8)
+{
+  _log("Run status-" + $sRunStatus+ "Site-" + $sSite+ "ReportName-" + $sReportName8+ "Studnt group-" + $sStdGrp8 +" Search-" + $sSearch8 +"DesirInd-" + $sDesirInd8+ 
+       "DesirFunc-" + $sDesirFunc8 + "DesirCity-" +$sDesirCity8 + "Exp-" +$sExp8 + "Ind-"+ $sInd8 + "Func-"+$sFunc8 +"spoke-"+ $sLangSpoke8+ "Write-"+ $sLangWrit8 + 
+       "Upload-"+$sUpload8+"data file-"+ $sDatafileName8);
+   //continue the script execution if failure occurs
+  	_continueOnError();   
+    //Sections of script,marked as a separate test case  
+    var $t = _testcase($sDatafileName, "Resume Baseline Test");
+    //Start of "marked as a separate test case"  
+	$t.start();               
+ 	//Condition for Runstatus      
+    if($sRunStatus==$sRunStatusValue)
+    {
+      //Condition for siteinstance	
+      if($sSite==$sSiteName2)
+      {		
+        	$sReportName=$sReportName8;
+        	 $sStdGrp=$sStdGrp8;
+             $sSearch=$sSearch8;
+             $sDesirInd=$sDesirInd8;
+             $sDesirFunc=$sDesirFunc8;
+             $sDesirCity=$sDesirCity8;
+             $sExp=$sExp8;		    
+             $sInd=$sInd8;		  	 
+             $sFunc=$sFunc8;		   
+             $sLangSpoke=$sLangSpoke8;		  	 
+             $sLangWrit=$sLangWrit8;		  	 	
+             $sUpload=$sUpload8;
+             $sDatafileName=$sDatafileName8
+               
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);
+        	//Pass resumes filters values
+        	Resumes_Filters($sReportName, $sStdGrp, $sSearch, $sDesirInd, $sDesirFunc, $sDesirCity, $sExp, $sInd, $sFunc,$sLangSpoke, 
+                            		$sLangWrit,$sUpload, $sDatafileName); 
+             _wait(20000);
+			//Write result value into CSV
+        	WriteToCSV($sDatafileName);
+    	
+      }
+      _log("Resumes Baseline Test-Passed:");
+    }else{
+    	_log("Resumes Baseline Test-Failed:");
+    }
+	//End of "marked as a separate test case"      
+   $t.end();     
+}
+/**********************************************
+    Method name	 :  Resumes_Actual
+    Author 	 	     :	venu
+    Created Date  :  2/10/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Resumes Actual
+function Resumes_Actual($sRunStatus, $sSite, $sReportName8, $sStdGrp8, $sSearch8, $sDesirInd8, $sDesirFunc8, $sDesirCity8, $sExp8, 
+                           				$sInd8, $sFunc8, $sLangSpoke8, $sLangWrit8, $sUpload8, $sDatafileName8)
+{
+   //continue the script execution if failure occurs
+  	_continueOnError();    
+    //Sections of script,marked as a separate test case      
+    var $t = _testcase($sDatafileName8, "Resume Actual Test");
+    //Start of "marked as a separate test case"  
+	$t.start();     
+	//Condition for Runstatus 
+    if($sRunStatus==$sRunStatusValue)
+    {
+      //Condition for siteinstance
+      if($sSite==$sSiteName2)
+      {		
+        	$sReportName=$sReportName8;
+        	 $sStdGrp=$sStdGrp8;
+             $sSearch=$sSearch8;
+             $sDesirInd=$sDesirInd8;
+             $sDesirFunc=$sDesirFunc8;
+             $sDesirCity=$sDesirCity8;
+             $sExp=$sExp8;
+             $sInd=$sInd8;
+             $sFunc=$sFunc8;
+             $sLangSpoke=$sLangSpoke8;
+             $sLangWrit=$sLangWrit8;
+             $sUpload=$sUpload8;
+             $sDatafileName=$sDatafileName8
+               
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);
+        	//Pass resumes filters values
+        	Resumes_Filters($sReportName, $sStdGrp, $sSearch, $sDesirInd, $sDesirFunc, $sDesirCity, $sExp, $sInd, $sFunc, $sLangSpoke, 
+                            		$sLangWrit, $sUpload, $sDatafileName); 
+           _wait(20000);
+        	//write Resumes results into temporary CSV file
+        	WriteToTempCSV($sDatafileName);
+			_wait(30000);
+        	//Compare Baseline and Acatual Results
+        	readTempCSVAndVerify($sDatafileName);
+			_wait(20000);
+        if(_fileExists($path_actual+$sDatafileName+".csv"))
+        {          
+          
+          _writeFile("\n @Fiter Values@"+"\n Student group:"+$sStdGrp+","+"\n Search:"+$sSearch+","+"\n Desired Industry:"+$sDesirInd+","+"Desired function:"+$sDesirFunc+","+
+                     "\n Desired city:"+$sDesirCity+","+"\n Experience:"+$sExp+","+"Industry:"+$sInd+","+"\n Function:"+$sFunc+","+
+                     "\n Language  spoken:"+$sLangSpoke+","+"Language write:"+$sLangWrit+","+"Upload:"+$sUpload+","+
+                     "\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+        }
+ 	
+      }
+            _log("Resumes Actual Test-Passed:");
+    }else{
+          _log("Resumes Actual Test-Failed:");
+    }
+    //End of "marked as a separate test case"   
+    $t.end();   
+  }  
+/**********************************************
+    Method name	 :  WriteToCSV
+    Author 	 	     :	venu
+    Created Date  :  2/8/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function WriteToCSV($sDatafileName){  
+  var $data=$sDatafileName;
+//   if(_exists($path_baseline+$sDatafileName+".csv"))
+//   {	//if exists delete file
+//     _deleteFile($path_baseline+$sDatafileName+".csv");	
+//   }  
+	//if(_exists(_heading3($cc_salay_id) || _div($resume_count_id) || _div($ucla_ResultID) || _table($table_id))) {
+  	//Columbia Centralized Count
+	if($sReportName==$sub)
+	{
+      _log("CC Count");
+      var $str;
+      $str=_getText(_heading3($cc_salay_id));
+      $str_array=[[$str]];
+      _writeCSVFile($str_array,$path_baseline+$sDatafileName+".csv");
+	 } 
+    //Resumes Count 
+	
+	if($sReportName==$sub1)
+	{
+		if(_exists(_div("no-results[1]"))){
+			_log("No Data found");
+		}else{		
+      _log("Resumes  count");
+      var $str;
+      $str=_getText(_div($resume_count_id));
+      $str_array=[[$str]];
+      _writeCSVFile($str_array,$path_baseline+$sDatafileName+".csv");
+		}	
+	  } 
+      //Contacts Count
+      if($sReportName==$sub2){
+        _log("Contacts");	
+         var $str;
+          $str=_getText(_div($resume_count_id));
+          $str_array=[[$str]];
+          _writeCSVFile($str_array,$path_baseline+$sDatafileName+".csv");
+      }
+        
+
+	//read table data from app    	
+	$Tabledata = _getTableContents(_table($table_id));
+
+  _log("Length:"+$Tabledata.length);
+	_log($Tabledata);
+    //push data into array
+    for (var $row = 0; $row < $Tabledata.length; $row++) 
+    {
+      	//assign table data into an array length
+      	$arr[$arr.length] = $Tabledata[$row];
+    }
+    //write functionality
+     Write($data);  
+    //}else{
+    //	_log("Table ID doesn't Exists");
+    //}
+}
+
+/**********************************************
+    Method name	 :  Write
+    Author 	 	     :	venu
+    Created Date  :  2/8/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+// write ui data into csv file
+  function Write($sDatafileName)
+ {
+
+      if(_exists($path_baseline))
+      {//condition for to check if file exists or not        
+        _log("Enter1");
+        //write in to csv file
+        _writeCSVFile($Tabledata,$path_baseline+$sDatafileName+".csv");
+      }
+     /*else
+      {
+           //create a directory and write in to csv file
+           var $file = new java.io.File($sBaseline_dir).mkdir();
+           _writeCSVFile($Tabledata,$path_baseline+$DatafileName+".csv");
+           _log(2);
+      }*/
+  }   
+
+	/********Job Postings**********/
+//Job postings Global variables
+//var $srunStatus;
+//var $sSite;
+//var $sReportName;
+var $sJobPhase;
+var $sJobType;
+var $sInterviewType;
+var $sStudentGroup;
+var $sJobPostingStatus;
+var $sRegistrationStatus;
+var $sEmployerName;
+var $sJobTitle;
+var $sJobIndustry;
+var $sJobFunction;
+var $sLocation;
+var $sLoc_Filter;
+var $sUSWorkAuth;
+var $sRecruitingYear;
+var $sPostedDate;
+var $sAppDueDate;
+var $sAppDueDate1;
+var $sCompanyPresen;
+var $sRoomAssign;
+var $sBiddingRound;
+//var $DatafileName;
+/**********************************************
+    Method name	 :  JobPosting_Baseline
+    Author 	 	     :	venu
+    Created Date  :  2/11/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Job postings baseline
+function JobPosting_Baseline($sRunStatus, $sSite, $sReportName, $sJobPhase7, $sJobType7, $sInterviewType7, $sStudentGroup7, 
+                             $sJobPostingStatus7, $sRegistrationStatus7, $sEmployerName7, $sJobTitle7, $sJobIndustry7, $sJobFunction7, 
+                             $sLocation7, $sLoc_Filter7, $sUSWorkAuth7, $sRecruitingYear7, $sPostedDate7, $sAppDueDate7, $sAppDueDate17, 
+                             $sCompanyPresen7,	$sRoomAssign7, $sBiddingRound7, $sDatafileName7)
+{	
+   //continue the script execution if failure occurs
+  _continueOnError();    
+    //Sections of script,marked as a separate test case   
+    var $t = _testcase($sDatafileName7, "JobPostings Baseline Test");
+    //Start of "marked as a separate test case"  
+	$t.start();    
+    //Condition for Runstatus  
+    if($sRunStatus==$sRunStatusValue)
+    {
+      //Condition for Site instance
+      if($sSite==$sSiteName2)
+      {      	
+        	 $sJobPhase=$sJobPhase7;
+             $sJobType=$sJobType7;
+             $sInterviewType=$sInterviewType7;
+             $sStudentGroup=$sStudentGroup7;
+             $sJobPostingStatus=$sJobPostingStatus7;
+             $sRegistrationStatus=$sRegistrationStatus7;
+             $sEmployerName=$sEmployerName7;
+             $sJobTitle=$sJobTitle7;
+             $sJobIndustry=$sJobIndustry7;
+             $sJobFunction=$sJobFunction7;
+             $sLocation=$sLocation7;
+             $sLoc_Filter=$sLoc_Filter7;
+             $sUSWorkAuth=$sUSWorkAuth7;
+             $sRecruitingYear=$sRecruitingYear7;
+             $sPostedDate=$sPostedDate7;
+             $sAppDueDate=$sAppDueDate7;
+        	 $sAppDueDate1=$sAppDueDate17;
+             $sCompanyPresen=$sCompanyPresen7;
+             $sRoomAssign=$sRoomAssign7;
+             $sBiddingRound=$sBiddingRound7;
+             $sDatafileName=$sDatafileName7;
+        	//loginTo12Twenty($Dartmouth_Url,$Username, $Password);
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);     
+        	//Pass Job postings filter values
+        	Jobposting_Filters($sJobPhase, $sJobType, $sInterviewType, $sStudentGroup, $sJobPostingStatus, $sRegistrationStatus, 
+                               $sEmployerName, $sJobTitle, $sJobIndustry, $sJobFunction, $sLocation, $sLoc_Filter, $sUSWorkAuth, 
+                               $sRecruitingYear, $sPostedDate, $sAppDueDate, $sAppDueDate1, $sCompanyPresen,	$sRoomAssign, $sBiddingRound); 
+			//write job postings results into CSV
+        	WriteToCSV_JobPost($sDatafileName);        	
+      }
+      _log("Job Postings Baseline Test-Passed:");
+    }else{
+      _log("Job Postings Baseline Test-Failed:");	
+    }
+    $t.end();      
+  }  
+/**********************************************
+    Method name	 :  JobPosting_Actual
+    Author 	 	     :	venu
+    Created Date  :  2/11/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Job postings Actual
+function JobPosting_Actual($sRunStatus, $sSite, $sReportName, $sJobPhase7, $sJobType7, $sInterviewType7, $sStudentGroup7, 
+                             $sJobPostingStatus7, $sRegistrationStatus7, $sEmployerName7, $sJobTitle7, $sJobIndustry7, $sJobFunction7, 
+                             $sLocation7, $sLoc_Filter7, $sUSWorkAuth7, $sRecruitingYear7, $sPostedDate7, $sAppDueDate7, $sAppDueDate17, 
+                             $sCompanyPresen7,	$sRoomAssign7, $sBiddingRound7, $sDatafileName7){
+   //continue the script execution if failure occurs
+  _continueOnError();   
+ 
+    //Sections of script,marked as a separate test case  
+    var $t = _testcase($sDatafileName7, "JobPostings Actual Test");
+    //Start of "marked as a separate test case"  
+	$t.start();     
+    //Condition for Runstatus       
+    if($sRunStatus==$sRunStatusValue)
+    {
+      //Condition for Site instance
+      if($sSite==$sSiteName2)
+      {
+        	$sJobPhase=$sJobPhase7;
+             $sJobType=$sJobType7;
+             $sInterviewType=$sInterviewType7;
+             $sStudentGroup=$sStudentGroup7;
+             $sJobPostingStatus=$sJobPostingStatus7;
+             $sRegistrationStatus=$sRegistrationStatus7;
+             $sEmployerName=$sEmployerName7;
+             $sJobTitle=$sJobTitle7;
+             $sJobIndustry=$sJobIndustry7;
+             $sJobFunction=$sJobFunction7;
+             $sLocation=$sLocation7;
+             $sLoc_Filter=$sLoc_Filter7;
+             $sUSWorkAuth=$sUSWorkAuth7;
+             $sRecruitingYear=$sRecruitingYear7;
+             $sPostedDate=$sPostedDate7;
+             $sAppDueDate=$sAppDueDate7;
+        	 $sAppDueDate1=$sAppDueDate17;
+             $sCompanyPresen=$sCompanyPresen7;
+             $sRoomAssign=$sRoomAssign7;
+             $sBiddingRound=$sBiddingRound7;
+             $sDatafileName=$sDatafileName7;
+        	//loginTo12Twenty($Dartmouth_Url,$Username, $Password);
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);     
+        	//Pass Job postings filter values
+        	Jobposting_Filters($sJobPhase, $sJobType, $sInterviewType, $sStudentGroup, $sJobPostingStatus, $sRegistrationStatus, 
+                               $sEmployerName, $sJobTitle, $sJobIndustry, $sJobFunction, $sLocation, $sLoc_Filter, $sUSWorkAuth, 
+                               $sRecruitingYear, $sPostedDate, $sAppDueDate, $sAppDueDate1, $sCompanyPresen,	$sRoomAssign, $sBiddingRound); 
+        	//verify job postings results
+        	ReadFromCSVandVerify_Jobpost($sDatafileName);
+       //Write filtervalues into actual csv file 
+       if(_fileExists($path_actual+$sDatafileName+".csv"))
+         {                    
+          _writeFile("\n @Fiter Values@"+"\n Job Type:"+$+","+"\n Interview Type:"+$+","+"\n Student group:"+$+","+"Jobposting status:"+$+","+
+                     "\n Registration status:"+$+","+"\n Employer name:"+$+","+"Job title:"+$+","+"\n Job Industry:"+$+","+"Job Function:"+$+","+
+                     "\n Location:"+$+","+"\n Location filter:"+$+","+"\n US work authorization:"+$+","+"\n Recruting year:"+$+","+"\n Posted date:"+$+","+
+                     "\n App due date:"+$+$+","+"\n Company presentation:"+$+","+"\n Room assignment status:"+$+","+"\n Bidding round:"+$+","+"\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+        }
+      }
+      _log("Job Postings Actual Test-Passed:");
+    }else{
+      _log("Job Postings Actual Test-Failed:");	
+    }
+     //End of "marked as a separate test case"  
+    $t.end();      
+  }  
+
+/**********************************************
+    Method name	 :  Jobposting_Filters
+    Author 	 	     :	venu
+    Created Date  :  2/11/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Pass the excel data to application
+function Jobposting_Filters($sJobPhase, $sJobType, $sInterviewType, $sStudentGroup, $sJobPostingStatus, $sRegistrationStatus, 
+                               $sEmployerName, $sJobTitle, $sJobIndustry, $sJobFunction, $sLocation, $sLoc_Filter, $sUSWorkAuth, 
+                               $sRecruitingYear, $sPostedDate, $sAppDueDate, $sAppDueDate1, $sCompanyPresen,	$sRoomAssign, $sBiddingRound)
+{
+//click on CSM   
+//_click(_link($link_csm));
+//click on Job Postings  
+_click(_link($link_jobpost));
+//pass the filter value to Jobphase  
+_setSelected(_select($drpdwn_jobphase), $sJobPhase);
+//pass the filter value to job type  
+_setSelected(_select($drpdwn_jobtype), $sJobType);
+//pass the drop down filter value to Interview type  
+_setSelected(_select($drpdwn_interview), $sInterviewType);
+//condition for Student group value is All  
+ if($sStudentGroup==$btn_all_job){
+  		_log("Select Default Filter");
+  	}else{
+      	//click on student group button
+        _click(_button($btn_all_job));
+      	// click on check box
+        _click(_checkbox(0,_near(_label($sStudentGroup))));         	
+  }  
+//pass the filter value to Job posting astatus   
+ //conditon for job industry is All
+  if($sJobPostingStatus==$btn_all_job){
+  		_log("Default Filters");
+  }else{
+     //click on Job industry
+       _click(_button($btn_jobStat));
+	   var $jobstatus=$sJobPostingStatus.split(",");
+      //read the number of filter
+      for(var $i=0;$i< $jobstatus.length;$i++){
+        //click on check box
+        _click(_checkbox(0,_near(_label($jobstatus[$i]))),$btn_CTRL);
+      }      
+  }	
+
+//pass the filter value to Registration status   
+_setSelected(_select($drpdwn_regstatus), $sRegistrationStatus);
+//pass the filter value to Employer name  
+_setValue(_textbox($txt_empname), $sEmployerName);
+//pass the filter value to job title  
+_setValue(_textbox($txt_jobtitle), $sJobTitle);
+  // condition for jobindustry value is All  
+  if($sJobIndustry==$btn_all_job){
+  		_log("Select Default Filter");
+  	}else{
+      //click on job industry button	
+      _click(_button($btn_JobIndust));
+	 var $jobs=$sJobIndustry.split("|");	
+      //read the number of filter
+      for(var $i=0;$i< $jobs.length;$i++){
+        //click on check box
+      _click(_checkbox(0,_near(_label($jobs[$i]))),$btn_CTRL);
+	}
+  }
+  //conditon for job industry is All
+  if($sJobFunction==$btn_all_job){
+  		_log("Default Filters");
+  }else{
+     //click on Job industry
+       _click(_button($btn_JobFunc));
+	   var $jobsfunc=$sJobFunction.split("|");
+      //read the number of filter
+      for(var $i=0;$i< $jobsfunc.length;$i++){
+        //click on check box
+        _click(_checkbox(0,_near(_label($jobsfunc[$i]))),$btn_CTRL);
+      }      
+  }
+//read the location
+$ch=$sLocation;
+//Pass the location value to switch case  
+switch($ch){
+   //choose city 
+  case $s_city:{
+    //click on city
+  	_click(_link($link_city));
+    //pass the city filter
+	_setValue(_textbox($slct_locl), $sLoc_Filter);
+    //break the loop
+    break;
+  }
+   //choose metro area 
+  case $s_metro:{
+    //click on metro area
+  	_click(_link($link_metro));
+    //select filter value
+	_setValue(_textbox($slct_locl), $sLoc_Filter);
+    break;
+  }
+   //choose state 
+  case $s_state:{
+    //click on state
+  	_click(_link($link_state));
+    //select filter value
+	_setSelected(_select($slct_loc), $sLoc_Filter);
+    break;
+  }
+  //choose north american regin  
+  case $s_nar:{
+    //click on north american region
+  	_click(_link($link_nar));
+    //select filter value
+	_setSelected(_select($slct_loc), $sLoc_Filter);
+    break;
+  }  
+  //choose country     
+  case $s_cntry:{
+    //click on country
+  	_click(_link($link_cntry));
+    //select filter value
+	_setSelected(_select($slct_loc), $sLoc_Filter);
+    break;
+  }  
+}
+//pass the filter value to US work authorization  
+_setSelected(_select($drpdwn_Workauth), $sUSWorkAuth);
+//pass the recruting filter value to applicatin  
+//_setSelected(_select($drpdwn_year), $sRecruitingYear);
+//pass the job posted date value to application  
+//_setSelected(_select($drpdwn_postyear), $sPostedDate);
+//pass the application due date value   
+//_setSelected(_select($drpdwn_appdue), $sAppDueDate);
+_setValue(_textbox($drpdwn_appdue), $sAppDueDate); 
+_setValue(_textbox($drpdwn_appdueEnd), $sAppDueDate1);  
+//pass the copmany Presentation value   
+_setSelected(_select($drpdwn_cmpnypres), $sCompanyPresen);
+//pass the room assingnment value  
+_setSelected(_select($drpdwn_roomass), $sRoomAssign);
+//pass the bidding round value  
+//_setSelected(_select($drpdwn_bidding),$sBiddingRound);
+//click on generate results  
+_click(_submit($btn_resumeResults));  
+}
+/**********************************************
+    Method name	 :  WriteToCSV_JobPost
+    Author 	 	     :	venu
+    Created Date  :  2/23/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function WriteToCSV_JobPost($sDatafileName){  
+  
+if(_exists($path_baseline+$sDatafileName+".csv"))
+   {	//if exists delete file
+     _deleteFile($path_baseline+$sDatafileName+".csv");	
+   }  
+var $str;
+ var $count=_count("_row","/job-posting ng-scope/");
+ _log($count);
+ for(var $i = 0; $i < $count; $i++){ 
+   $str=_collectAttributes("_div","/.*/","sahiText",_in(_row("job-posting ng-scope["+$i+"]")));//returns the array of elements
+   //$str=_collectAttributes("_div","/.*/","sahiText",_in(_div("job-posting ng-scope")));
+   //_log($str);//log the values and check whether it is storing as array or not.
+   $Tabledata=[$str];       
+  _log("Table:"+$Tabledata);
+    _writeCSVFile($Tabledata,$path_baseline+$sDatafileName+".csv");
+ }  
+//var $rows = _collect("_div", "/.*/", _in(_div("job-posting ng-scope")));  
+//  	_log("Rows:"+$rows.length);
+//  	// creating an array
+//  	var $array = new Array($rows.length); 
+//    for (var $i = 0; $i < $rows.length; $i++) 
+//    {	
+//      	// extracting value of span from each listitem
+//        var $items = _collectAttributes("_div", "/.*/", "sahiText", _in($rows[$i]));
+//      	// putting the values of span in an arrya
+//        $array[$i] = $items;
+//      _log("Array:" +$array[$i]);
+//      _writeCSVFile($array[$i],$path_baseline+$sDatafileName+".csv");
+//    }
+
+}
+/*************Report Phase 2(Columbia Centralized)***************/
+var $gradYear;
+var $gradTerm;
+var $degree;
+var $college;
+var $program;
+var $sUndergradMajor;
+/**********************************************
+    Method name	 :  CC_Baseline
+    Author 	 	     :	venu
+    Created Date  :  2/8/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//1220 Reports Baseline
+function CC_1220_Baseline( $sRunStatus, $sSite, $sReportName11, $sgradYear11, $sgradTerm11, $sdegree11, 
+                          				$scollege11, $sprogram11, $sUndergradMajor11, $sDatafileName11)
+{  
+  _log("Site type:"+$sSite+"Report:"+$sReportName+"Year:"+$sgradYear11+"Term:"+$sgradTerm11+"Degree:"+$sdegree11+ 
+       "College:"+$scollege11+"Program:"+$sprogram11+"UnderMaj:"+$sUndergradMajor11+"Data:"+$sDatafileName11);
+   //continue the script execution if failure occurs
+   _continueOnError();   
+  
+    //Sections of script,marked as a separate test case
+    var $t = _testcase($sDatafileName11, "CC Baseline Test");
+    //Start of "marked as a separate test case"
+	$t.start();      
+    //Condition for Runstatus
+    if($sRunStatus==$sRunStatusValue){
+      //Condition for Siteinstance
+      if($sSite==$sSiteName)
+      {    	
+        	 $sReportName=$sReportName11;
+        	 $sgradYear=$sgradYear11;
+             $sgradTerm=$sgradTerm11;
+             $sdegree=$sdegree11;
+             $scollege=$scollege11;
+             $sprogram=$sprogram11;
+             $sUndergradMajor=$sUndergradMajor11;
+             $sDatafileName=$sDatafileName11;
+        	//Login to 12Twenty CC
+      		loginTo12Twenty($CC_Url,$sUsr, $sPasw); 
+        	//click on Reports
+        	_click(_link($link_1220Reports));
+        	//click on SubReport name
+        	_click(_link($sReportName));
+        	//Pass Filter data to application
+            CC_FilterData($sgradYear, $sgradTerm, $sdegree, $scollege, $sprogram, $sUndergradMajor);  
+        	//Write into CSV
+        	WriteToCSV($sDatafileName);
+  
+      }
+      _log("1220 Reports Baseline Test-Passed");      
+    }
+    else
+    {
+     	_log("1220 Reports Baseline Test-Failed");
+    } 
+   //End of "marked as a separate test case" 
+   $t.end(); 
+  }  
+/**********************************************
+    Method name	 :  CC_Actual
+    Author 	 	     :	venu
+    Created Date  :  2/8/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//1220 Reports Actual
+function CC_1220_Actual($sRunStatus, $sSite, $sReportName11, $sgradYear11, $sgradTerm11, $sdegree11, 
+                          				$scollege11, $sprogram11, $sUndergradMajor11, $sDatafileName11){
+   //continue the script execution if failure occurs
+  _continueOnError();   
+
+    //Sections of script,marked as a separate test case
+    var $t = _testcase($sDatafileName11, "CC Actual Test");
+    //Start of "marked as a separate test case"
+	$t.start();      
+    //Condition for Runstatus
+   if($sRunStatus==$sRunStatusValue){
+     //Condition for Siteinstance
+      if($sSite==$sSiteName)
+      {		
+        	$sReportName=$sReportName11;
+        	 $sgradYear=$sgradYear11;
+             $sgradTerm=$sgradTerm11;
+             $sdegree=$sdegree11;
+             $scollege=$scollege11;
+             $sprogram=$sprogram11;
+             $sUndergradMajor=$sUndergradMajor11;
+             $sDatafileName=$sDatafileName11;
+        	//Login to 12Twenty CC
+      		loginTo12Twenty($CC_Url,$sUsr, $sPasw); 
+        	//click on Reports
+        	_click(_link($link_1220Reports));
+        	//click on SubReport name
+        	_click(_link($sReportName));
+        	//Pass Filter data to application
+            CC_FilterData($sgradYear, $sgradTerm, $sdegree, $scollege, $sprogram, $sUndergradMajor);  
+        	//Write results into Temporary CSV file
+        	WriteToTempCSV($sDatafileName);
+        	//Compare Baseline and Acatual Results
+        	readTempCSVAndVerify($sDatafileName);
+         if(_fileExists($path_actual+$sDatafileName+".csv"))
+         {
+
+           _writeFile("\n Graduation Year:"+$sgradYear+","+"\n Graduation Term:"+$sgradTerm+","+"\n Degree:"+$sdegree+","+"\n College:"+$scollege+","+
+                      "\n Program:"+$sprogram+","+"\n Under graduate major:"+$sUndergradMajor+","+"\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+         }
+     	
+      }
+   _log("1220 Reports Actual Test-Passed");  
+   }else{
+   	_log("1220 Reports Actual Test-Failed"); 
+   }
+    //End of "marked as a separate test case"
+    $t.end(); 
+  }  
+/**********************************************
+    Method name	 :  CC_FilterData
+    Author 	 	     :	venu
+    Created Date  :  2/8/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Read 1220 Reports filter values
+function CC_FilterData($sgradYear, $sgradTerm, $sdegree, $scollege, $sprogram, $sUndergradMajor){
+    _wait(3000);
+  	//Pass datafile GraduationYear filter value to application 
+	_setSelected(_select($drpdwn_gradYear), $sgradYear);
+  	//Pass datafile GraduationTerm filter value to application
+	_setSelected(_select($drpdwn_gradTerm), $sgradTerm);	
+   _wait(3000);
+ //if condition value is "Columbia college" 
+  if($scollege==$col){   
+       //Click button All
+      _click(_button($btn_all));
+     //click on checkbox
+      _check(_checkbox($checkbox_select));
+    }
+  //if condition value is Department/Program
+    if($sprogram==$dept){
+      	//Click button all
+        _click(_button($btn_all));
+      	//click on check box
+        _check(_checkbox($checkbox_select1));
+    }
+    _wait(2000);
+  	//Pass datafile Degree level
+	_setSelected(_select($drpdwn_Degree), $sdegree);
+   //Condition for Undergraduate major 
+//    if($sUndergradMajor==$ugmajor){
+//      _check(_radio($radio_underMajor));
+//    }  
+  	//Click on generat reports button
+	_click(_submit($generateReport));
+}
+/*******Student Tracking**********/
+//Global variables
+//var $srunStatus;
+//var $sSite;
+//var $sReportName;
+var $sJob_filter;
+var $sPg_Outcome;
+//var $sIntern_Outcome;
+var $sOutcome_Breakdown;
+var $sRumor_Job;
+var $sAcademic;
+var $StdVal1;
+var $StdVal2;
+//var $DatafileName;
+var $ch;
+/**********************************************
+    Method name	 :  StdTrack_Baseline
+    Author 	 	     :	venu
+    Created Date  :  2/16/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function StdTrack_Baseline($sRunStatus, $sSite, $sReportName12, $sPg_Outcome12,  $sOutcome_Breakdown12, 
+                           					$sRumor_Job12, $sAcademic12, $StdVal112,$StdVal212, $sDatafileName12){
+   //continue the script execution if failure occurs
+  _continueOnError();   
+    var $t = _testcase($sDatafileName12, "Student Tracking Baseline Test");
+	$t.start();         
+    if($sRunStatus==$sRunStatusValue)
+    {      
+      if($sSite==$sSiteName3)
+      {
+        	loginTo12Twenty($UCLA_Url,$sUsr, $sPasw);      		
+      }else{
+        	loginTo12Twenty($Fordham_Url,$sUsr, $sPasw);
+      		
+      } 
+      	$sReportName=$sReportName12;
+       $sPg_Outcome=$sPg_Outcome12;       
+       $sOutcome_Breakdown=$sOutcome_Breakdown12;
+       $sRumor_Job=$sRumor_Job12;
+       $sAcademic=$sAcademic12;
+       $StdVal1=$StdVal112;
+       $StdVal2=$StdVal212;
+       $sDatafileName=$sDatafileName12;
+        	//$ch=$sJob_filter; 
+      	    _log($sJob_filter);
+        	StdTrack_Filters($sReportName, $sPg_Outcome,  $sOutcome_Breakdown, $sRumor_Job, $sAcademic, $StdVal1,$StdVal2); 
+         //UCLA & Fordham Count
+  if(_exists(_div($ucla_ResultID))){
+    	_log("UCLA & Fordham Count");
+  		var $str;
+      $str=_getText(_div($ucla_ResultID));
+      _log($str);
+      $str_array=[[$str]];
+      _writeCSVFile($str_array,$path_baseline+$sDatafileName+".csv");
+  } 
+        	WriteToCSV($sDatafileName);
+       
+      _log("Student Tracking Baseline-Passed");		
+    }else{
+    	_log("Student Tracking Baseline-Failed");
+    }
+   $t.end();     
+  }  	
+/**********************************************
+    Method name	 :  StdTrack_Actual
+    Author 	 	     :	venu
+    Created Date  :  2/16/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function StdTrack_Actual($sRunStatus, $sSite, $sReportName12, $sPg_Outcome12,  $sOutcome_Breakdown12, 
+                           					$sRumor_Job12, $sAcademic12, $StdVal112,$StdVal212, $sDatafileName12)
+{
+   //continue the script execution if failure occurs
+  _continueOnError();   
+    var $t = _testcase($sDatafileName12, "Student Tracking Baseline Test");
+	$t.start();      
+    if($sRunStatus==$sRunStatusValue)
+    {      
+      if($sSite==$sSiteName3)
+      {
+      		loginTo12Twenty($UCLA_Url,$sUsr, $sPasw);   
+      }else{
+      		loginTo12Twenty($Fordham_Url,$sUsr, $sPasw);
+      } 
+ 	   $sReportName=$sReportName12;
+       $sPg_Outcome=$sPg_Outcome12;       
+       $sOutcome_Breakdown=$sOutcome_Breakdown12;
+       $sRumor_Job=$sRumor_Job12;
+       $sAcademic=$sAcademic12;
+       $StdVal1=$StdVal112;
+       $StdVal2=$StdVal212;
+       $sDatafileName=$sDatafileName12;
+        	//$ch=$sJob_filter; 
+        	StdTrack_Filters($sReportName, $sPg_Outcome,  $sOutcome_Breakdown, $sRumor_Job, $sAcademic, $StdVal1,$StdVal2); 
+             //UCLA & Fordham
+      if(_exists(_div($ucla_ResultID))){
+            var $str;
+          $str=_getText(_div($ucla_ResultID));
+          _log($str);
+          $str_array=[[$str]];
+          _writeCSVFile($str_array,$path_temp+$sDatafileName+".csv");
+      }
+        	WriteToTempCSV( $sDatafileName);
+      		readTempCSVAndVerify( $sDatafileName);
+      if(_fileExists($path_actual+$sDatafileName+".csv"))
+         {
+
+           _writeFile("\n Add filter:"+$+","+"\n out come:"+$+","+"\n Rumor job:"+$+","+"\n Academic:"+$+","+
+                      "\n Student filter:"+$+","+$+","+"\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+         } 
+      		
+    }else{
+    	_log("Student Tracking Runstatus N");
+    }
+   $t.end();     
+ }  	
+/**********************************************
+    Method name	 :  StdTrack_Filters
+    Author 	 	     :	venu
+    Created Date  :  2/16/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function StdTrack_Filters($sReportName, $sPg_Outcome,  $sOutcome_Breakdown, $sRumor_Job, $sAcademic, $StdVal1,$StdVal2){
+  _click(_link($link_StudentTrc));
+  _click(_submit($btn_addFilter));
+  switch($sReportName){
+      case $sCase_PgGrad:
+      {		 	
+		_click(_div($sReportName));
+		_setSelected(_select($select_StdTrack_val1),$sPg_Outcome);
+        if($sPg_Outcome==$sCase_SeekEmploy){
+        	_setSelected(_select($select_StdTrack_val2), $sOutcome_Breakdown);
+          if($sOutcome_Breakdown != "All"){
+          	_setSelected(_select($select_StdTrack_val3), $sRumor_Job);
+          }  
+        }else if($sPg_Outcome==$sCase_NotSeekEmpl || $sPg_Outcome==$sCase_NoReportOut || $sPg_Outcome==$sCase_SeekGrad){
+        	_setSelected(_select($select_StdTrack_val2), $sOutcome_Breakdown);
+        }
+        break;
+      }  
+      
+    case $ch_gradYear:{
+    	_click(_div($sReportName));
+      	_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      	break;
+    }
+    case $ch_jointDegree:{
+    		_click(_div($sReportName));
+      		_click(_radio($StdVal1));
+      		break;
+    }  
+	case $ch_DegreeType:{
+      		_click(_div($sReportName));
+    		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    } 
+	case $ch_mbaYear:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    }   
+	case $ch_acdSec:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    }  
+     case $ch_acaSpec:{
+    		_click(_div($sReportName));
+       		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+       		break;
+    }  
+    case $ch_gender:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    }
+     case $ch_workCons:{
+    		_click(_div($sReportName));
+       		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    } 
+    case $ch_workDetail:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    } 
+    case $ch_workExp:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    }
+    case $ch_citizen:{
+    		_click(_div($sReportName));
+      		_setValue(_textbox($txt_countryId), $StdVal1);
+      		break;
+    } 
+    case $ch_desirFunc:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    }
+    case $ch_desirInd:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    }
+    case $ch_desirCity:{
+    		_click(_div($sReportName));
+      		_setValue(_textbox($txt_StdTrack_txtval4), $StdVal1);
+      		break;
+    }   
+    case $ch_enroll:{
+  			_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+   }
+    case $ch_sign:{
+  			_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+  	}
+    case $ch_assign:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    }   
+    case $ch_act:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    } 
+          case $ch_DegreeLevel:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+    	} 
+      case $ch_Degree:{
+      		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+      
+      }    
+      case $ch_UndGrad:{
+      		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+      
+      }    
+      case $ch_gradYear:{
+      		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+      
+      }    
+      case $ch_UndrMajor:{
+      		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+      
+      }    
+      case $ch_UndrMinor:{
+      		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+      
+      }    
+      case $ch_Collg:{
+      		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+      
+      }    
+      case $ch_Military:{
+        	_click(_div($sReportName));        	
+      		_click(_radio($StdVal1));
+        	break;
+      } 
+    	case $ch_Employ:{
+          	//_click(_div($sJob_filter));
+            _click(_div($link_div));
+      		_setValue(_textbox($txt_StdTrack_txtval3), $StdVal1);
+          	_setValue(_textbox($txt_StdTrack_txtval4), $StdVal2);
+          	break;
+      } 
+      case $ch_Visits:{
+      		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+      } 
+      case $ch_Cmpltd:{
+    		_click(_div($sReportName));
+      		_setSelected(_select($select_StdTrack_val1), $StdVal1);
+      		break;
+     }  
+    default:{
+    	_log("NA");
+      		 	
+
+    }  
+  }//close Switch
+  	_click(_submit($btn_StdTrack));
+	_click(_button($btn_result));
+}//close Function
+	/*******Companies***********/
+// Global declerations for Col names for Companies
+//var $srunStatus;
+//var $sSite;
+//var $sReportName;
+var $sJobPhase;	
+var $sIndustry;
+var $sFunction;
+var $sCompanySize;
+//$sLocation;
+//$sLoc_Filter;
+var $sAccountManager;
+var $sOutreachLead;
+var $sOutreachPriority;
+//var $DatafileName;
+/**********************************************
+    Method name	 :  Company_Baseline
+    Author 	 	     :	Ananta
+    Created Date  :  2/24/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Company_Baseline( $sRunStatus, $sSite, $sReportName13, $sJobPhase13,	$sIndustry13, $sFunction13, $sCompanySize13,
+                          				$sLocation13, $sLoc_Filter13, $sAccountManager13, $sOutreachLead13, $sOutreachPriority13, $sDatafileName13)
+{ 
+   //continue the script execution if failure occurs
+  _continueOnError();   
+
+    var $t = _testcase($sDatafileName13, "Companies Baseline Test");
+	$t.start();     
+    if($sRunStatus==$sRunStatusValue)
+    {
+      if($sSite==$sSiteName2)
+      {
+        	$sReportName=$sReportName13;
+            $sJobPhase=$sJobPhase13;	
+            $sIndustry=$sIndustry13;
+            $sFunction=$sFunction13;
+            $sCompanySize=$sCompanySize13;
+            $sLocation=$sLocation13;
+            $sLoc_Filter=$sLoc_Filter13;
+            $sAccountManager=$sAccountManager13;
+            $sOutreachLead=$sOutreachLead13;
+            $sOutreachPriority=$sOutreachPriority13;
+            $sDatafileName=$sDatafileName13;
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);       	
+        	companyDirectoryFilters( $sReportName, $sJobPhase,	$sIndustry, $sFunction, $sCompanySize, $sLocation, 
+       	                             		$sLoc_Filter, $sAccountManager, $sOutreachLead, $sOutreachPriority); 
+     	   if(_exists(_div($cmpny_count_id))){
+            _log("Companies Count");
+             var $str;
+              $str=_getText(_div($cmpny_count_id));
+              $str_array=[[$str]];
+              _writeCSVFile($str_array,$path_baseline+$sDatafileName+".csv");
+        }  
+        	 WriteToCSV( $sDatafileName);
+    	
+      }
+    }
+    $t.end();       
+}// end of searchCompanyDirectoryData function
+/**********************************************
+    Method name	 :  Company_Actual
+    Author 	 	     :	Ananta
+    Created Date  :  2/24/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Company_Actual($sRunStatus, $sSite, $sReportName13, $sJobPhase13,	$sIndustry13, $sFunction13, $sCompanySize13,
+                          				$sLocation13, $sLoc_Filter13, $sAccountManager13, $sOutreachLead13, $sOutreachPriority13, $sDatafileName13)
+{ 
+   //continue the script execution if failure occurs
+  _continueOnError();   
+ 
+    var $t = _testcase($sDatafileName13, "Companies Actual Test");
+	$t.start();
+    if($sRunStatus==$sRunStatusValue)
+    {
+      if($sSite==$sSiteName2)
+      {
+      		$sReportName=$sReportName13;
+            $sJobPhase=$sJobPhase13;	
+            $sIndustry=$sIndustry13;
+            $sFunction=$sFunction13;
+            $sCompanySize=$sCompanySize13;
+            $sLocation=$sLocation13;
+            $sLoc_Filter=$sLoc_Filter13;
+            $sAccountManager=$sAccountManager13;
+            $sOutreachLead=$sOutreachLead13;
+            $sOutreachPriority=$sOutreachPriority13;
+            $sDatafileName=$sDatafileName13;
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);       	
+        	companyDirectoryFilters( $sReportName, $sJobPhase,	$sIndustry, $sFunction, $sCompanySize, $sLocation, 
+                                    		$sLoc_Filter, $sAccountManager, $sOutreachLead, $sOutreachPriority);
+             if(_exists(_div($cmpny_count_id))){
+            _log("Companies Count");
+             var $str;
+              $str=_getText(_div($cmpny_count_id));
+              $str_array=[[$str]];
+              _writeCSVFile($str_array,$path_temp+$sDatafileName+".csv");
+        }
+        	WriteToTempCSV($sDatafileName);
+        	readTempCSVAndVerify($sDatafileName);  	
+        if(_fileExists($path_actual+$sDatafileName+".csv"))
+        {
+
+          _writeFile("\n Job Phase:"+$sJobPhase+","+"\n Industry:"+$sIndustry+","+"\n Function:"+$sFunction+","+"\n Company size:"+$sCompanySize+","+"\n Location:"+$sLocation+","+
+                     "\n Location Filter:"+$sLoc_Filter+","+"\n Account manager:"+$sAccountManager+","+"\n Outreach lead: "+$sOutreachLead+","+
+                     "\n Outreach priority:"+$sOutreachPriority+","+"\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+        }  
+      }
+    }
+    $t.end();      
+}// end of searchCompanyDirectoryData function
+/**********************************************
+    Method name	 :  companyDirectoryFilters
+    Author 	 	     :	Ananta
+    Created Date  :  2/24/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function companyDirectoryFilters($sReportName, $sJobPhase,	$sIndustry, $sFunction, $sCompanySize, $sLocation, 
+                                    		$sLoc_Filter, $sAccountManager, $sOutreachLead, $sOutreachPriority){
+  
+    _click(_link($sReportName));  	
+    _click(_link($link_compDirectoryClearFilter));  
+	 //_setSelected(_select(0), $sJobPhase); 
+   if($sIndustry==$col_All)
+   	{
+      _log("Industry inside if  :"); 
+   	}
+  	else
+  	{  
+      _click(_button($btn_Comp_Ind));
+	  var $ind=$sIndustry.split(",");	
+		for(var $i=0;$i<$ind.length;$i++)
+		{
+			_click(_checkbox(0,_near(_label($ind[$i]))),$btn_CTRL);
+		}      
+  	}
+  if($sFunction==$col_All)
+  	{
+      _log($sFunction) 
+  	}
+  	else
+  	{
+      _log("testing value", +$sFunction);
+      _click(_button($btn_Comp_Func));
+	  var $func=$sFunction.split(",");		
+      for(var $i=0;$i<$func.length;$i++)
+		{
+			_click(_checkbox(0,_near(_label($func[$i]))),$btn_CTRL);
+		}
+  	} 
+  // checking for the Value inside the Excel sheet for companySize
+  if($sCompanySize==$col_All)
+  {
+    _log("All");
+  }
+  else
+  {  
+    _click(_button($btn_Comp_Size));
+	var $cmp=$sCompanySize.split(",");		  
+    for(var $i=0;$i<$cmp.length;$i++)
+    {
+      _click(_checkbox(0,_near(_label($cmp[$i]))),$btn_CTRL);
+    }
+  }
+  
+$ch=$sLocation;
+switch($ch){
+  case $s_city:{
+  	_click(_link($link_city));
+	_setValue(_textbox($txtbox_city), $sLoc_Filter);
+    break;
+  }
+  case $s_metro:{
+  	_click(_link($link_metro));
+	_setValue(_textbox($txtbox_MetroArea), $sLoc_Filter);
+    break;
+  }
+  case $s_state:{
+  	_click(_link($link_state));
+ 	_check(_checkbox($sLoc_Filter));
+    break;
+  }
+  case $s_nar_Cmny:{
+  	_click(_link($link_NAmericaRegion));
+	 _check(_checkbox($sLoc_Filter));
+    break;
+  }  
+  case $s_cntry:{
+  	_click(_link($link_cntry));
+	 _check(_checkbox($sLoc_Filter));
+    break;
+  }  
+
+}
+
+  // checking for the Value inside the Excel sheet for AccountManager
+  _log("Manager : ",+$sAccountManager);
+  if($sAccountManager==$col_All)
+  	{
+    	_log("All");
+   	}
+  else
+    {
+       _click(_button($btn_Comp_Manger));
+		var $accMang=$sAccountManager.split(",");	
+      for(var $i=0;$i<$accMang.length;$i++)
+		{
+			_click(_checkbox(0,_near(_label($accMang[$i]))),$btn_CTRL);
+		}
+    } 
+  // checking for the Value inside the Excel sheet for outreachLead 	
+  _log("OutreachLead : ",+$sOutreachLead );
+  if($sOutreachLead==$col_All)
+  {
+    _log("All");
+  }
+  else
+  {
+    _click(_button(_button($btn_Comp_Executive)));
+	 var $accExec=$sOutreachLead.split(",");	 
+      for(var $i=0;$i<$accExec.length;$i++)
+		{
+			_click(_checkbox(0,_near(_label($accExec[$i]))),"CTRL");
+		}
+//   _click(_checkbox($sOutreachLead, _near(_label($label_compDirectory_outreachLeadSetToMe))));
+  }
+ 
+  // checking for the Value inside the Excel sheet for outreachPriority
+  if($sOutreachPriority==$col_All)	
+  {
+    _log("All");
+  }
+  else
+  {	
+    _click(_button($btn_Comp_Prio));
+	var $outPri=$sOutreachPriority.split(",");  
+    for(var $i=0;$i<$outPri.length;$i++)
+    {
+      _click(_checkbox(0,_near(_label($outPri[$i]))),$btn_CTRL);
+    }
+  }
+  _click(_button($btn_compDirectory_getResults));
+}
+	/********************Contact*********************/
+//Global variables
+//var $srunStatus;
+//var $sSite;
+//var $sReportName;
+var $sContact_filter;
+var $sContact_value;
+var $sContact_subvalue;
+//var $DatafileName;
+
+/**********************************************
+    Method name	 :  Contacts_Filters
+    Author 	 	     :	venu
+    Created Date  :  2/15/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Contacts_Filters($choice){
+ 	// _click(_link($link_cmpnyTracking));
+	 _click(_link($link_contactDir));
+	 _click(_submit($btn_addFilter));
+  	 _log($choice);
+switch($choice){    
+  case $ch_EmpName:
+    {
+      	_log($choice);
+		_click(_div($sContact_filter));
+		_setValue(_textbox($txt_Contact_val1), $sContact_value);
+		_click(_div("filter-editor filter-editor-full"));
+      	break;
+    }
+    case $ch_JobTi:
+    {
+      	_log($choice);
+      	_click(_div($sContact_filter));
+		_setValue(_textbox($txt_Contact_JobTitl), $sContact_value);     	 
+      	break;
+    }
+  case $ch_Ind:{
+    	_log($choice);
+  		_click(_div($sContact_filter));
+		_setSelected(_select($select_Contact_Indu), $sContact_value);
+    	break;
+  }
+  case $ch_Alum:{
+    	_log($choice);
+  		_click(_div($sContact_filter));
+		_click(_radio($sContact_value));
+    	break;
+  }
+  case $ch_AlumYear:{
+    	_log($choice);
+  	 _click(_div($sContact_filter));
+	 _setSelected(_select($num_Contact_val1), $sContact_value); 
+	//_setValue(_numberbox($num_Contact_val1), $sContact_value);  
+	//_setValue(_numberbox(num_Contact_val2), $sContact_subvalue);
+    break;
+  }	
+  case $ch_Ci:{
+	_log($choice);    	
+  	_click(_div($sContact_filter));
+	_setValue(_textbox($txt_Contact_val1), $sContact_value);
+    break;
+  }
+  case $ch_Metro:{
+    _log($choice);
+  	_click(_div($sContact_filter));
+	_setSelected(_select($select_Contact_Indu), $sContact_value);
+    break;
+  }
+  case $ch_USState:{
+    _log($choice);
+  	_click(_div($sContact_filter));
+	_setSelected(_select($select_Contact_Indu), $sContact_value);
+    break;
+  }  
+  case $ch_Coun:{
+    _log($choice);
+	_click(_div($sContact_filter));
+	_setSelected(_select($select_Contact_Indu), $sContact_value);  
+    break;
+  }
+  case $ch_NorRegion:{
+    _log($choice);
+  	_click(_div($sContact_filter));
+	_setSelected(_select($select_Contact_Indu), $sContact_value);
+    break;
+  }
+  case $ch_WorRegion:{
+    _log($choice);
+  	_click(_div($sContact_filter));
+	_setSelected(_select($select_Contact_Indu), $sContact_value);
+    break;
+  }
+  case $ch_PriCont:{
+    _log($choice);
+  	_click(_div($sContact_filter));
+	_click(_radio($sContact_value));
+    break;
+  }  
+  default:
+  {    
+  	_log("None");
+  }
+}
+_click(_div($select_filter));
+_click(_submit($btn_submitFilter));
+_click(_button($btn_result));
+}
+/**********************************************
+    Method name	 :  Contacts_Baseline
+    Author 	 	     :	venu
+    Created Date  :  2/15/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Contacts_Baseline ($sRunStatus, $sSite, $sReportName, $sContact_filter14, $sContact_value14, $sContact_subvalue14, $sDatafileName14){
+	
+   //continue the script execution if failure occurs
+  _continueOnError();   
+
+    var $t = _testcase($sDatafileName14, "Contacts Baseline Test");
+	$t.start();    
+    if($sRunStatus==$sRunStatusValue)
+    {      
+      if($sSite==$sSiteName2)
+      {
+           $sContact_filter=$sContact_filter14;
+           $sContact_value=$sContact_value14;
+           $sContact_subvalue=$sContact_subvalue14;
+		   $sDatafileName=$sDatafileName14;
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);
+        	 var $ch=$sContact_filter;
+        	Contacts_Filters($ch);              
+        	WriteToCSV($sDatafileName);
+	   	
+      }
+      _log("Contacts Baseline Test-Passed:"); 
+    }else{
+      _log("Contacts Baseline Test-Failed:");
+    }
+   $t.end();     
+  }  
+/**********************************************
+    Method name	 :  Contacts_Actual
+    Author 	 	     :	venu
+    Created Date  :  2/15/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Contacts_Actual ($sRunStatus, $sSite, $sReportName, $sContact_filter14, $sContact_value14, $sContact_subvalue14, $sDatafileName14){
+   //continue the script execution if failure occurs
+   _continueOnError();   
+    var $t = _testcase($sDatafileName14, "Contacts Actual Test");
+	$t.start();     
+    if($sRunStatus==$sRunStatusValue)
+    {      
+      if($sSite==$sSiteName2)
+      {
+        	$sContact_filter=$sContact_filter14;
+           $sContact_value=$sContact_value14;
+           $sContact_subvalue=$sContact_subvalue14;
+		   $sDatafileName=$sDatafileName14;
+           //login 
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);
+        	 var $ch=$sContact_filter;
+            //select filter value
+        	Contacts_Filters($ch); 
+           //write data into temp csv file
+        	WriteToTempCSV($sDatafileName);
+           //verisy baseline and actual files
+        	readTempCSVAndVerify($sDatafileName);
+         //Write filter values into actual csv file
+          if(_fileExists($path_actual+$sDatafileName+".csv"))
+        {
+
+          _writeFile("\n Contact filter:"+$+","+"\n filter value:"+$+","+$+","+
+                          "\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+        }  
+      }
+      _log("Contacts Actual Test-Passed:"); 
+    }else{
+      _log("Contacts Actual Test-Failed:");	
+    }
+   $t.end();     
+}
+/**********Events**************/
+
+ //Global declerations for Col names
+//var $sRunStatus;
+//var $sSite;
+var $sAdmin_Std;
+//var $sReportName;
+var $sStudentGroup;
+var $sEventType;
+var $sEventFormate;
+var $sEventTimeline;
+var $sEmployerName;
+var $sIndustry;
+var $sEventSource;
+var $sEventStatus;
+//var $sDatafileName;
+/**********************************************
+    Method name	 :  EventFilters
+    Author 	 	     :	Ananta
+    Created Date  :  2/23/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function EventFilters($sStudentGroup, $sEventType, $sEventFormate, $sEventTimeline, $sEmployerName, 
+  									$sIndustry, $sEventSource, $sEventStatus)
+ {  		
+  	//_click(_link($link_csm));
+	_click(_link($link_eventManagement));
+      if($sStudentGroup==$col_All){
+		_log("Select Default Filters");
+      }else{
+		_click(_button($btn_all));       
+       	_click(_checkbox($sStudentGroup, _near(_label($label_studentGroup))));
+      }
+	  if($sEventType==$col_All){
+		_log("Select Default Filters");
+      }else{
+		_click(_button($btn_all));       
+		_click(_checkbox($sEventType));  
+       //_setSelected(_select($dropdown_EventType), $sEventType );
+      }
+//	 _click(_button("All[1]"));
+//	_setSelected(_select($dropdown_EventType), $sEventType );
+	_setSelected(_select($dropdown_EventFormat), $sEventFormate);
+    _setSelected(_select($dropdown_eventTimeline),$sEventTimeline);
+  	_wait(2000);
+	_setValue(_textbox($txtBox_employerName), $sEmployerName);
+	_setSelected(_select($dropdown_consolidatedIndustry), $sIndustry);
+	_setSelected(_select($dropdown_eventSource, _near(_label($label_eventSource))), $sEventSource);
+	_setSelected(_select($dropdown_status, _near(_label($label_eventStatus))), $sEventStatus);
+   _setSelected(_select($dropdown_eventTimeline),$sEventTimeline);
+	_click(_submit($btn_getResults));
+}    
+/**********************************************
+    Method name	 :  Event_Baseline
+    Author 	 	     :	Ananta
+    Created Date  :  2/23/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Event_Baseline($sRunStatus, $sSite, $sAdmin_Std, $sReportName, $sStudentGroup15, $sEventType15, $sEventFormate15,
+  									$sEventTimeline15, $sEmployerName15, $sIndustry15,$sEventSource15, $sEventStatus15, $sDatafileName15)
+  {
+  
+   //continue the script execution if failure occurs
+  _continueOnError();   
+ 
+      var $t = _testcase($sDatafileName15, "Events Baseline Test");
+      $t.start();       
+          if($sRunStatus==$sRunStatusValue)
+          {      
+              if($sSite==$sSiteName2)
+      		 {
+               
+                     $sStudentGroup=$sStudentGroup15;
+                     $sEventType=$sEventType15;
+                     $sEventFormate=$sEventFormate15;
+                     $sEventTimeline=$sEventTimeline15;
+                     $sEmployerName=$sEmployerName15;
+                     $sIndustry=$sIndustry15;
+                     $sEventSource=$sEventSource15;
+                     $sEventStatus=$sEventStatus15;
+                     $sDatafileName=$sDatafileName15;
+                      loginTo12Twenty($Url_George,$sUsr, $sPasw);    
+                    EventFilters($sStudentGroup, $sEventType, $sEventFormate, $sEventTimeline, $sEmployerName, 
+                                        $sIndustry, $sEventSource, $sEventStatus); 
+                    WriteToCSV($sDatafileName); 	
+               
+      		}
+        }  	
+        $t.end();     
+	}
+/**********************************************
+    Method name	 :  Event_Actual
+    Author 	 	     :	Ananta
+    Created Date  :  2/23/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Event_Actual($sRunStatus, $sSite, $sAdmin_Std, $sReportName, $sStudentGroup15, $sEventType15, $sEventFormate15,
+  									$sEventTimeline15, $sEmployerName15, $sIndustry15,$sEventSource15, $sEventStatus15, $sDatafileName15)
+{
+   //continue the script execution if failure occurs
+  _continueOnError();   
+      var $t = _testcase($sDatafileName15, "Events Actual Test");
+      $t.start();        
+          if($sRunStatus==$sRunStatusValue)
+          {      
+              if($sSite==$sSiteName2)
+      		 {     
+               
+                     $sStudentGroup=$sStudentGroup15;
+                     $sEventType=$sEventType15;
+                     $sEventFormate=$sEventFormate15;
+                     $sEventTimeline=$sEventTimeline15;
+                     $sEmployerName=$sEmployerName15;
+                     $sIndustry=$sIndustry15;
+                     $sEventSource=$sEventSource15;
+                     $sEventStatus=$sEventStatus15;
+                     $sDatafileName=$sDatafileName15;
+                      loginTo12Twenty($Url_George,$sUsr, $sPasw);    
+                    //read filter values
+                    EventFilters($sStudentGroup, $sEventType, $sEventFormate, $sEventTimeline, $sEmployerName, 
+                                        $sIndustry, $sEventSource, $sEventStatus); 
+                    //verify csv file
+                    readFromCSVAndVerify($sDatafileName); 
+        			//Write filter values into actual csv
+                  if(_fileExists($path_actual+$sDatafileName+".csv"))
+                  {
+
+                    _writeFile("\n Student group:"+$sStudentGroup+","+"\n Event type:"+$sEventType+","+"\n Enent Format:"+$sEventFormate+","+"\n Event timeline:"+$sEventTimeline+","+"\n Employer name:"+$sEmployerName+","+
+                               "\n Industry:"+$sIndustry+","+"\n Event  source:"+$sEventSource+","+"\n Event status:"+$sEventStatus+","+"\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+                  }  
+                              	
+      		}
+        }  	
+        $t.end();     
+}
+/**********************************************
+    Method name	:  readFromCSVAndVerify_Outcome
+    Author 	 	    :	venu
+    Created Date  :  2/15/16
+    Description		:	This Method is used to get table content from UI,read baseline file and verify.
+    Input			  :   NA
+**********************************************/
+//read data from ui and verify with csv
+function readFromCSVAndVerify_Outcome($sDatafileName){    
+  var $data = $sDatafileName;
+  var $rows= _count("_row", "/.*/", _in(_table("rankings"))); 	
+  _log($rows);
+  var $array=[];
+  var $items=[];
+     // creating an array
+  	 $array = new Array($rows.length); 
+  if($rows > 1){
+    for (var $i =2; $i <=$rows; $i++) 
+   {	
+      _log($i);
+      	// extracting value of span from each listitem
+     $items[$rows] = _getText(_row($i));
+     _writeCSVFile([$items], $path_temp+$sDatafileName+".csv");     
+    }
+  }else{
+   var $noData = "No data found";
+  	 _writeCSVFile([$noData], $path_baseline+$sDatafileName+".csv");   
+  }
+ //  _writeCSVFile($array, $path_temp+$sDatafileName+".csv");  
+    //get data from UI
+	$actual = _readCSVFile($path_temp+$sDatafileName+".csv", "," );
+    //get data from CSv
+	$expected =_readCSVFile($path_baseline+$sDatafileName+".csv", "," );
+    //verify functionality 
+    Verify($data);
+}
+/**********************************************
+    Method name	:  Verify
+    Author 	 	    :	sarita
+    Created Date  :  12/14/15
+    Description		:	This Method is used to Verify.
+    Input			  :   NA
+**********************************************/
+//verify functionality
+function Verify($sDatafileName){  
+  	//Iterate the loop to verify Actual and Expecetd results base d on rows and columns
+	for (var $i=0; $i<$actual.length && $i<$expected.length; $i++){
+			for (var $j=0; $j<$actual[$i].length && $j<$expected[$i].length; $j++)
+	        {	//verify actual data equal to expected data
+				if($actual[$i][$j]==$expected[$i][$j])
+	            {
+	              _log("Expected: " + $expected[$i][$j]+"Actual "+$actual[$i][$j]);
+			     }
+	          else
+	            {
+                  //condition for if file exits or not
+                  if(_fileExists($path_actual+$sDatafileName+".csv"))
+                  {
+                     //update data if error occurs
+                     updateOnError($i,$j,$actual[$i][$j], $expected[$i][$j]);
+                  }
+                  else
+                  {
+                      //create a directory
+                      //var $file = new java.io.File($sAcual_dir).mkdir();
+                        //copy source file to destination file
+                      _copyFile($path_baseline+$sDatafileName+".csv", $path_actual+$sDatafileName+".csv");
+                    //update data if any errors occured 
+                    updateOnError($i,$j,$actual[$i][$j], $expected[$i][$j]);
+                    //compare baseline ,actual if failure occurs to continue call onScriptFailure.
+                   _assertEqual($actual[$i][$j],$expected[$i][$j]);
+                  }
+	              _log("Verificaton failed :=Expected data in failed test case " + $expected[$i][$j]+"Actual "+$actual[$i][$j]);
+	           }
+             // _assertEqual($actual[$i][$j],$expected[$i][$j]);
+	              _log("Expected: " + $expected[$i][$j]+"Actual "+$actual[$i][$j]);  
+	    }
+	}
+}
+/**********************************************
+    Method name	:  updateOnError
+    Author 	 	    :	sarita
+    Created Date  :  12/15/15
+    Description		:	This Method is used to update error data.
+    Input			  :   NA
+**********************************************/
+//update csv if data varied
+function updateOnError($x,$y,$actualData,$expectedData)
+{
+ //read csv actual file 
+ var $a=_readCSVFile($path_actual+$sDatafileName+".csv");
+  //update data actual data and expeted data
+  $a[$x][$y] = $actualData+"***"+$expectedData;
+  //write into actual file
+  _writeCSVFile($a,$path_actual+$sDatafileName+".csv",true);
+  
+}
+
+/**********************************************
+    Method name	:  onScriptFailure
+    Author 	 	    :	sarita
+    Created Date  :  12/15/15
+    Description		:	This Method is used to continue verify data if failure occurs.
+    Input			  :   NA
+**********************************************/
+//continue the verify functionality if failure error occured
+function onScriptFailure($e)
+{
+   //_logExceptionAsFailure($e);
+   _log("Script failing for Report:"+$sDatafileName+".csv");
+   return true; // Forces Sahi to continue execution and not stop at error. Since Sahi Pro V4.3
+}
+/**********************************************
+    Method name	 :  WriteToTempCSV_GeorgeSalary
+    Author 	 	     :	venu
+    Created Date  :  2/15/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function  WriteToTempCSV_GeorgeSalary($sDatafileName){
+ 	
+    //get table content from ui
+	$Tabledata = _getTableContents(_table($table_id_salarydb1));
+    //push data into array
+    for (var $row = 0; $row < $Tabledata.length; $row++) 
+    {
+      	//assign table data into an array length
+      	$arr[$arr.length] = $Tabledata[$row];
+    }
+  	_log($Tabledata);
+    //write in to csv file
+    _writeCSVFile($Tabledata,$path_temp+$sDatafileName+".csv");
+  $Tabledata = _getTableContents(_table($table_id_salarydb2));
+    //push data into array
+    for (var $row = 0; $row < $Tabledata.length; $row++) 
+    {
+      	//assign table data into an array length
+      	$arr[$arr.length] = $Tabledata[$row];
+    }
+  _log($Tabledata);
+    //write in to csv file
+    _writeCSVFile($Tabledata,$path_temp+$sDatafileName+".csv");
+  
+  $Tabledata = _getTableContents(_table($table_id_salarydb3));
+    //push data into array
+    for (var $row = 0; $row < $Tabledata.length; $row++) 
+    {
+      	//assign table data into an array length
+      	$arr[$arr.length] = $Tabledata[$row];
+    }
+    //write in to csv file
+    _writeCSVFile($Tabledata,$path_temp+$sDatafileName+".csv");
+}  
+/**********************************************
+    Method name	:  readTempCSVAndVerify
+    Author 	 	    :	venu
+    Created Date  :  2/9/16
+    Description		:	This Method is used to get table content from UI,read baseline file and verify.
+    Input			  :   NA
+**********************************************/
+function readTempCSVAndVerify($sDatafileName){
+	$actual = _readCSVFile($path_temp+$sDatafileName+".csv", "," );
+    //get data from baseine csv file
+	$expected =_readCSVFile($path_baseline+$sDatafileName+".csv", "," );
+  var $data = $sDatafileName;
+    //verify data
+    Verify($data);
+     //delete temporary files if exists  
+  // full path of folder inside which we want to delete for files and folders
+// var $dir = new java.io.File($sTemp_dir);  
+// if ($dir.exists()) 
+// { //get no.of files in directory
+//	var $files = $dir.listFiles();
+//    //condition to check no.of files
+//    if($files.length>0)
+//    { 
+//      for (var $i=0; $i<$files.length; $i++) 
+//      {//delete file
+//        $files[$i].delete();	
+//      }
+//    }
+//}          
+//else {
+//	_log('Directory does not exist. Nothing to enumerate');
+//}
+////delete Directory  
+//$dir.delete();
+}	
+/**********************************************
+    Method name	:  WriteToTempCSV
+    Author 	 	    :	venu
+    Created Date  :  2/10/16
+    Description		:	
+    Input			  :   
+**********************************************/
+function WriteToTempCSV($sDatafileName){
+  	//CC
+	if($sReportName==$sub )
+	{
+	          var $str;
+	          $str=_getText(_heading3($cc_salay_id));
+	          $str_array=[[$str]];
+	          _writeCSVFile($str_array,$path_temp+$sDatafileName+".csv");
+	 } 
+  	//Resumes
+	if($sReportName==$sub1 )
+	{
+      	_log("Resume temp count");
+	          var $str;
+	          $str=_getText(_div($resume_count_id));
+	          $str_array=[[$str]];
+	          _writeCSVFile($str_array,$path_temp+$sDatafileName+".csv");
+	  } 
+  //Contacts 
+  if($sReportName==$sub2){
+  	 var $str;
+      $str=_getText(_div($resume_count_id));
+      $str_array=[[$str]];
+      _writeCSVFile($str_array,$path_temp+$sDatafileName+".csv");
+  }
+ 
+	//read data from app    	
+    _log("Enter");
+    //get table content from ui
+	$Tabledata = _getTableContents(_table($table_id));
+
+    //push data into array
+    for (var $row = 0; $row < $Tabledata.length; $row++) 
+    {
+      	//assign table data into an array length
+      	$arr[$arr.length] = $Tabledata[$row];
+    }
+    //write functionality
+    _writeCSVFile($Tabledata,$path_temp+$sDatafileName+".csv");
+
+}
+/**********************************************
+    Method name	 :  ReadFromCSVand Verify_Jobpost
+    Author 	 	     :	venu
+    Created Date  :  2/23/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function ReadFromCSVandVerify_Jobpost($sDatafileName){
+var $data = $sDatafileName;  
+var $str;
+var $count=_count("_row","/job-posting ng-scope/");
+_log($count);
+    for(var $i = 0; $i < $count; $i++)
+    { 
+       $str=_collectAttributes("_div","/.*/","sahiText",_in(_row("job-posting ng-scope["+$i+"]")));//returns the array of elements
+       _log($str);//log the values and check whether it is storing as array or not.
+       $Tabledata=[$str];
+      _writeCSVFile($Tabledata,$path_temp+$sDatafileName+".csv");
+     }
+  readTempCSVAndVerify($data);
+}  
+/**********************************************
+    Method name	:  readFromCSVAndVerify
+    Author 	 	    :	venu
+    Created Date  :  2/9/16
+    Description		:	This Method is used to get table content from UI,read baseline file and verify.
+    Input			  :   NA
+**********************************************/
+//read data from ui and verify with csv
+function readFromCSVAndVerify($sDatafileName){    
+  	var $data=$sDatafileName;
+    //get data from UI
+	$actual = _getTableContents(_table($table_id));
+  //_writeCSVFile($str_array,"D:\\Merge.csv");
+    //get data from CSV
+	$expected =_readCSVFile($path_baseline+$sDatafileName+".csv", "," );
+    //verify functionality 
+    Verify($data);
+}
+
+/*******Appointments********/
+//Appointments
+var $sAdvise;
+var $sAppointmentT;
+var $sBlockT;
+/**********************************************
+    Method name	:  AppointmentsFilters
+    Author 	 	    :	venu
+    Created Date  :  08/29/16
+    Description		:	
+    Input			  :   
+**********************************************/
+function AppointmentsFilters($sAdviser,$sAppointmentType,$sBlockType)
+ {  		
+  	//_click(_link($link_csm));
+	_click(_link("Appointments"));
+	 //select Adviser
+		if($sAdviser==$btn_all_job)
+		{
+			_log("Default Filters");
+	  	}else{
+		 //click on Adviserr
+		   _click(_button($btn_all));
+		   var $advise=$sAdviser.split(",");
+		  //read the number of filter
+		  for(var $i=0;$i< $advise.length;$i++){
+			//click on check box
+			_click(_checkbox(0,_near(_label($advise[$i]))),$btn_CTRL);
+	   }
+    //select Adviser
+		if($sAppointmentType==$btn_all_job){
+			_log("Default Filters");
+	  }else{
+		 //click on AppointmentType
+		   _click(_button($AppointmentType));
+		   var $appointmentType=$sAppointmentType.split(",");
+		  //read the number of filter
+		  for(var $i=0;$i< $appointmentType.length;$i++){
+			//click on check box
+			_click(_checkbox(0,_near(_label($appointmentType[$i]))),$btn_CTRL);
+	   }	  
+	  }
+  //Select Block status
+ _setSelected(_select(2), $sBlockType);			
+	  
+	_click(_submit($btn_getResults));
+} 
+}
+/**********************************************
+    Method name	 :  Appointments_Baseline
+    Author 	 	     :	venu
+    Created Date  :  08/29/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+
+//Appointments baseline
+function App_Baseline($sRunStatus, $sSite, $sReportName,$sAdviser17,$sAppointmentType17,$sBlockType17,$sDatafileName17)
+{	
+   //continue the script execution if failure occurs
+  _continueOnError();    
+    //Sections of script,marked as a separate test case   
+    var $t = _testcase($sDatafileName17, "Appointments Baseline Test");
+    //Start of "marked as a separate test case"  
+	$t.start();    
+    //Condition for Runstatus  
+    if($sRunStatus==$sRunStatusValue)
+    {
+      //Condition for Site instance
+      if($sSite==$sSiteName2)
+      {      	
+        	 $sAdvise=$sAdviser17;
+             $sAppointmentT=$sAppointmentType17;
+			 $sBlockT=$sBlockType17;
+             $sDatafileName = $sDatafileName17;
+
+        	//loginTo12Twenty($Dartmouth_Url,$Username, $Password);
+        	loginTo12Twenty($Url_George,$sUsr,$sPasw);     
+        	//Pass Appointments filter values
+        	AppointmentsFilters($sAdvise,$sAppointmentT,$sBlockT); 
+			//write Appointments results into CSV
+       	 //var $a=_collectAttributes("_tableHeader","/.*/","sahiText",_in(_row(1)));
+          //_log($a);
+          //_writeCSVFile([$a],$path_baseline+$sDatafileName+".csv");
+          var $b=_collectAttributes("_span","/.*/","sahiText",_in(_table(3)));
+          _log($b);
+          for(var $i=0;$i<=$b.length;$i++){
+         		 _writeCSVFile([[$b[$i],[""]]],$path_baseline+$sDatafileName+".csv");
+		  }
+//        	var $str=[];
+//			$Tabledata=[$str];    
+//			 var $count=_count("_div","/calendar/");
+//  			_log($count);
+//				for(var $i = 0; $i < 1; $i++){ 
+//					   $str=_collectAttributes("_div","/.*/","sahiText",_in(_div("calendar")));//returns the array of elements
+//					   $Tabledata=[$str];    
+//						_log("Table:"+$Tabledata);
+//						_writeCSVFile($Tabledata,$path_baseline+$sDatafileName+".csv");
+			  }    
+      
+    $t.end();      
+  	}  
+}
+/**********************************************
+    Method name	 :  Appointments_Actual
+    Author 	 	     :	venu
+    Created Date  :  08/29/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+
+//Appointments baseline
+function App_Actual($sRunStatus, $sSite, $sReportName,$sAdviser17,$sAppointmentType17,$sBlockType17,$sDatafileName17)
+{	
+   //continue the script execution if failure occurs
+  _continueOnError();    
+    //Sections of script,marked as a separate test case   
+    var $t = _testcase($sDatafileName17, "Appointments Baseline Test");
+    //Start of "marked as a separate test case"  
+	$t.start();    
+    //Condition for Runstatus  
+    if($sRunStatus==$sRunStatusValue)
+    {
+      //Condition for Site instance
+      if($sSite==$sSiteName2)
+      {      	
+        	 $sAdvise=$sAdviser17;
+             $sAppointmentT=$sAppointmentType17;
+             $sBlockT=$sBlockType17;
+             $sDatafileName=$sDatafileName17;
+            
+        	//loginTo12Twenty($Dartmouth_Url,$Username, $Password);
+        	loginTo12Twenty($Url_George,$sUsr, $sPasw);     
+        	//Pass Appointment filter values
+        	AppointmentsFilters($sAdvise,$sAppointmentT,$sBlockT); 
+		 //write to csv	      	
+       	 var $a=_collectAttributes("_tableHeader","/.*/","sahiText",_in(_row(1)));
+          _log($a);
+          _writeCSVFile([$a],$path_temp+$sDatafileName+".csv");
+          var $b=_collectAttributes("_span","/.*/","sahiText",_in(_table(3)));
+          _log($b);
+          for(var $i=0;$i<=$b.length;$i++){
+         		 _writeCSVFile([[$b[$i],[""]]],$path_temp+$sDatafileName+".csv");            
+		  }
+          readTempCSVAndVerify($sDatafileName);
+        if(_fileExists($path_actual+$sDatafileName+".csv"))
+        {
+
+          _writeFile("\n Advise:"+$sAdvise+","+"\n Appointment type:"+$sAppointmentT+","+"\nBlock status:"+$sBlockT+","+
+                         "\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+        }  
+    $t.end();      
+  }
+ }
+}
+/**********************************************
+    Method name	 :  Writetocsv_GeorgeOutcome
+    Author 	 	     :	venu
+    Created Date  :  09/19/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+function Writetocsv_GeorgeOutcome($sDatafileName)
+{
+	 _log("In-Outcomes");
+	var $rows= _count("_row", "/.*/", _in(_table("rankings"))); 	
+     _log($rows);
+  var $array=[];
+  var $items=[];
+     // creating an array
+  	 $array = new Array($rows.length); 
+  if($rows > 1) 
+  {
+    for (var $i =2; $i <=$rows; $i++) 
+   {	
+        _log($i);
+      	// extracting value of span from each listitem
+     $items[$rows] = _getText(_row($i));
+     _writeCSVFile([$items], $path_baseline+$sDatafileName+".csv");     
+    }
+  }else{
+   var $noData = "No data found";
+  	 _writeCSVFile([$noData], $path_baseline+$sDatafileName+".csv");   
+  } 
+  	_log("Out-Outcomes");
+   
+}

@@ -1,0 +1,81 @@
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear4,sGradTerm4,sOfferTiming4,sCutoffDate4,sSubReport,sDatafileName4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",Y,NALP Report (16),UCLA_Law,2013,0,0,With,Class Summary,Auto_Data_NALP_Table_CS_Table_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",Y,NALP Report (16),UCLA_Law,2013,0,0,Without,Class Summary,Auto_Data_NALP_Table_CS_Table_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",Y,NALP Report (16),UCLA_Law,2013,0,1,With ,Class Summary,Auto_Data_NALP_Table_CS_Table_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",Y,NALP Report (16),UCLA_Law,2013,1,0,With ,Class Summary,Auto_Data_NALP_Table_CS_Table_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",Y,NALP Report (16),UCLA_Law,2012,0,0,With ,Class Summary,Auto_Data_NALP_Table_CS_Table_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Graduate Demographics,Auto_Data_NALP_Table_1_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Graduate Demographics,Auto_Data_NALP_Table_1_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Graduate Demographics,Auto_Data_NALP_Table_1_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With ,Graduate Demographics,Auto_Data_NALP_Table_1_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Graduate Demographics,Auto_Data_NALP_Table_1_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Employment Status by Gender,Auto_Data_NALP_Table_2_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Employment Status by Gender,Auto_Data_NALP_Table_2_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Employment Status by Gender,Auto_Data_NALP_Table_2_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Employment Status by Gender,Auto_Data_NALP_Table_2_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Employment Status by Gender,Auto_Data_NALP_Table_2_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With, Employment Status by Age at Graduation,Auto_Data_NALP_Table_3_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without, Employment Status by Age at Graduation,Auto_Data_NALP_Table_3_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With , Employment Status by Age at Graduation,Auto_Data_NALP_Table_3_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With , Employment Status by Age at Graduation,Auto_Data_NALP_Table_3_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With , Employment Status by Age at Graduation,Auto_Data_NALP_Table_3_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Employer Types by Gender,Auto_Data_NALP_Table_4_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Employer Types by Gender,Auto_Data_NALP_Table_4_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Employer Types by Gender,Auto_Data_NALP_Table_4_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Employer Types by Gender,Auto_Data_NALP_Table_4_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Employer Types by Gender,Auto_Data_NALP_Table_4_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Employer Types by Age at Graduation,Auto_Data_NALP_Table_5_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Employer Types by Age at Graduation,Auto_Data_NALP_Table_5_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Employer Types by Age at Graduation,Auto_Data_NALP_Table_5_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Employer Types by Age at Graduation,Auto_Data_NALP_Table_5_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Employer Types by Age at Graduation,Auto_Data_NALP_Table_5_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Private Practice Detail by Gender,Auto_Data_NALP_Table_6_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Private Practice Detail by Gender,Auto_Data_NALP_Table_6_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Private Practice Detail by Gender,Auto_Data_NALP_Table_6_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Private Practice Detail by Gender,Auto_Data_NALP_Table_6_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Private Practice Detail by Gender,Auto_Data_NALP_Table_6_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Employer Detail by Gender,Auto_Data_NALP_Table_7_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Employer Detail by Gender,Auto_Data_NALP_Table_7_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Employer Detail by Gender,Auto_Data_NALP_Table_7_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Employer Detail by Gender,Auto_Data_NALP_Table_7_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Employer Detail by Gender,Auto_Data_NALP_Table_7_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Employment Status by Race/Ethnicity,Auto_Data_NALP_Table_8_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Employment Status by Race/Ethnicity,Auto_Data_NALP_Table_8_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Employment Status by Race/Ethnicity,Auto_Data_NALP_Table_8_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Employment Status by Race/Ethnicity,Auto_Data_NALP_Table_8_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Employment Status by Race/Ethnicity,Auto_Data_NALP_Table_8_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Employer Types by Race/Ethnicity,Auto_Data_NALP_Table_9_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Employer Types by Race/Ethnicity,Auto_Data_NALP_Table_9_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Employer Types by Race/Ethnicity,Auto_Data_NALP_Table_9_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Employer Types by Race/Ethnicity,Auto_Data_NALP_Table_9_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Employer Types by Race/Ethnicity,Auto_Data_NALP_Table_9_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Private Practice Detail by Race/Ethnicity,Auto_Data_NALP_Table_10_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Private Practice Detail by Race/Ethnicity,Auto_Data_NALP_Table_10_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Private Practice Detail by Race/Ethnicity,Auto_Data_NALP_Table_10_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Private Practice Detail by Race/Ethnicity,Auto_Data_NALP_Table_10_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Private Practice Detail by Race/Ethnicity,Auto_Data_NALP_Table_10_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Employer Detail by Race/Ethnicity,Auto_Data_NALP_Table_11_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Employer Detail by Race/Ethnicity,Auto_Data_NALP_Table_11_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Employer Detail by Race/Ethnicity,Auto_Data_NALP_Table_11_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Employer Detail by Race/Ethnicity,Auto_Data_NALP_Table_11_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Employer Detail by Race/Ethnicity,Auto_Data_NALP_Table_11_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Source of Job by Employer Type,Auto_Data_NALP_Table_12_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Source of Job by Employer Type,Auto_Data_NALP_Table_12_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Source of Job by Employer Type,Auto_Data_NALP_Table_12_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Source of Job by Employer Type,Auto_Data_NALP_Table_12_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Source of Job by Employer Type,Auto_Data_NALP_Table_12_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With, Number of Jobs Reported Taken by State,Auto_Data_NALP_Table_13_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without, Number of Jobs Reported Taken by State,Auto_Data_NALP_Table_13_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With , Number of Jobs Reported Taken by State,Auto_Data_NALP_Table_13_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With , Number of Jobs Reported Taken by State,Auto_Data_NALP_Table_13_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With , Number of Jobs Reported Taken by State,Auto_Data_NALP_Table_13_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With,Location of Instate Jobs,Auto_Data_NALP_Table_14_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without,Location of Instate Jobs,Auto_Data_NALP_Table_14_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With ,Location of Instate Jobs,Auto_Data_NALP_Table_14_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With ,Location of Instate Jobs,Auto_Data_NALP_Table_14_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With ,Location of Instate Jobs,Auto_Data_NALP_Table_14_5
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,With, Full and Part-time Jobs by Employer Type,Auto_Data_NALP_Table_15_1
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,0,Without, Full and Part-time Jobs by Employer Type,Auto_Data_NALP_Table_15_2
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,0,1,With , Full and Part-time Jobs by Employer Type,Auto_Data_NALP_Table_15_3
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2013,1,0,With , Full and Part-time Jobs by Employer Type,Auto_Data_NALP_Table_15_4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP",N,NALP Report (16),UCLA_Law,2012,0,0,With , Full and Part-time Jobs by Employer Type,Auto_Data_NALP_Table_15_5

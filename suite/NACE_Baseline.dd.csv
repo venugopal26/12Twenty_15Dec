@@ -1,0 +1,71 @@
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear3,sGradTerm3,sCollege3,sDegreelevel3,sReportingMajor3,sProgram3,sSubReport,sDatafileName3
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,All Majors,--,Summary,Auto_Data_NACE_Table1_1
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,1,All,1,All Majors,--,Summary,Auto_Data_NACE_Table1_2
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,2,All Majors,--,Summary,Auto_Data_NACE_Table1_3
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,3,All Majors,--,Summary,Auto_Data_NACE_Table1_4
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,Primary Major Only,--,Summary,Auto_Data_NACE_Table1_5
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,FC AT ROSE HILL,0,All Majors,--,Summary,Auto_Data_NACE_Table1_6
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,1,All,0,All Majors,--,Summary,Auto_Data_NACE_Table1_7
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2013,0,All,0,All Majors,--,Summary,Auto_Data_NACE_Table1_8
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,0,Summary,Auto_Data_NACE_Table1_9
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,1,Summary,Auto_Data_NACE_Table1_10
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,All Majors,--,Full-Time Employment,Auto_Data_NACE_Table2_1
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,1,All Majors,--,Full-Time Employment,Auto_Data_NACE_Table2_2
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,2,All Majors,--,Full-Time Employment,Auto_Data_NACE_Table2_3
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,3,All Majors,--,Full-Time Employment,Auto_Data_NACE_Table2_4
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,Primary Major Only,--,Full-Time Employment,Auto_Data_NACE_Table2_5
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,FC AT ROSE HILL,0,All Majors,--,Full-Time Employment,Auto_Data_NACE_Table2_6
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,1,All,0,All Majors,--,Full-Time Employment,Auto_Data_NACE_Table2_7
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2013,0,All,0,All Majors,--,Full-Time Employment,Auto_Data_NACE_Table2_8
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,0,Full-Time Employment,Auto_Data_NACE_Table2_9
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,1,Full-Time Employment,Auto_Data_NACE_Table2_10
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,All Majors,--,Part-Time Employment,Auto_Data_NACE_Table3_1
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,1,All Majors,--,Part-Time Employment,Auto_Data_NACE_Table3_2
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,2,All Majors,--,Part-Time Employment,Auto_Data_NACE_Table3_3
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,3,All Majors,--,Part-Time Employment,Auto_Data_NACE_Table3_4
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,Primary Major Only,--,Part-Time Employment,Auto_Data_NACE_Table3_5
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,FC AT ROSE HILL,0,All Majors,--,Part-Time Employment,Auto_Data_NACE_Table3_6
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,1,All,0,All Majors,--,Part-Time Employment,Auto_Data_NACE_Table3_7
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2013,0,All,0,All Majors,--,Part-Time Employment,Auto_Data_NACE_Table3_8
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,0,Part-Time Employment,Auto_Data_NACE_Table3_9
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,1,Part-Time Employment,Auto_Data_NACE_Table3_10
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,All Majors,--,Service Organization,Auto_Data_NACE_Table4_1
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,1,All Majors,--,Service Organization,Auto_Data_NACE_Table4_2
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,2,All Majors,--,Service Organization,Auto_Data_NACE_Table4_3
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,3,All Majors,--,Service Organization,Auto_Data_NACE_Table4_4
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,Primary Major Only,--,Service Organization,Auto_Data_NACE_Table4_5
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,FC AT ROSE HILL,0,All Majors,--,Service Organization,Auto_Data_NACE_Table4_6
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,1,All,0,All Majors,--,Service Organization,Auto_Data_NACE_Table4_7
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2013,0,All,0,All Majors,--,Service Organization,Auto_Data_NACE_Table4_8
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,0,Service Organization,Auto_Data_NACE_Table4_9
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,1,Service Organization,Auto_Data_NACE_Table4_10
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,All Majors,--,Military Service,Auto_Data_NACE_Table5_1
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,1,All Majors,--,Military Service,Auto_Data_NACE_Table5_2
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,2,All Majors,--,Military Service,Auto_Data_NACE_Table5_3
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,3,All Majors,--,Military Service,Auto_Data_NACE_Table5_4
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,Primary Major Only,--,Military Service,Auto_Data_NACE_Table5_5
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,FC AT ROSE HILL,0,All Majors,--,Military Service,Auto_Data_NACE_Table5_6
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,1,All,0,All Majors,--,Military Service,Auto_Data_NACE_Table5_7
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2013,0,All,0,All Majors,--,Military Service,Auto_Data_NACE_Table5_8
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,0,Military Service,Auto_Data_NACE_Table5_9
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,1,Military Service,Auto_Data_NACE_Table5_10
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,All Majors,--,Continuing Education,Auto_Data_NACE_Table6_1
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,1,All Majors,--,Continuing Education,Auto_Data_NACE_Table6_2
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,2,All Majors,--,Continuing Education,Auto_Data_NACE_Table6_3
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,3,All Majors,--,Continuing Education,Auto_Data_NACE_Table6_4
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,Primary Major Only,--,Continuing Education,Auto_Data_NACE_Table6_5
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,FC AT ROSE HILL,0,All Majors,--,Continuing Education,Auto_Data_NACE_Table6_6
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,1,All,0,All Majors,--,Continuing Education,Auto_Data_NACE_Table6_7
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2013,0,All,0,All Majors,--,Continuing Education,Auto_Data_NACE_Table6_8
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,0,Continuing Education,Auto_Data_NACE_Table6_9
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,1,Continuing Education,Auto_Data_NACE_Table6_10
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,All Majors,--,Seeking or Unreported,Auto_Data_NACE_Table7_1
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,1,All Majors,--,Seeking or Unreported,Auto_Data_NACE_Table7_2
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,2,All Majors,--,Seeking or Unreported,Auto_Data_NACE_Table7_3
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,3,All Majors,--,Seeking or Unreported,Auto_Data_NACE_Table7_4
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,All,0,Primary Major Only,--,Seeking or Unreported,Auto_Data_NACE_Table7_5
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,0,FC AT ROSE HILL,0,All Majors,--,Seeking or Unreported,Auto_Data_NACE_Table7_6
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2014,1,All,0,All Majors,--,Seeking or Unreported,Auto_Data_NACE_Table7_7
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Fordham_Centralized,2013,0,All,0,All Majors,--,Seeking or Unreported,Auto_Data_NACE_Table7_8
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,0,Seeking or Unreported,Auto_Data_NACE_Table7_9
+NACE_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NACE",Y,NACE Report (7),Columbia_Centralized,2014,0,All,0,All Majors,1,Seeking or Unreported,Auto_Data_NACE_Table7_10

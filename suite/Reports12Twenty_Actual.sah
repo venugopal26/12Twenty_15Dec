@@ -1,0 +1,4 @@
+_include("../base/12TwentyKeyword_Phase3.sah");
+Reports1220_Actual($sRunStatus, $sSiteInstanceType, $sSiteInstance, $sReportType, $sGradClass, $sGradTerm, $sOfferTiming, $sJobPhase, $sWorkAuthorization,
+ 		$sDesiredIndustry, $sIncludeRumorJobs, $sIncludedReporting, $sDegreeLevel, $sCollege, $sDepartment, $sUndergradMajor, $sProgram,
+ 		$sMBAClass, $sJointdegree, $sSurveyPeriod, $sDatafileName);

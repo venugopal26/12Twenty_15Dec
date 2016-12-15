@@ -1,0 +1,21 @@
+#script,url,tags,sRunStatus, sSiteType,sSite,sGradYear5,sGradTerm5,sOfferTiming5,sCutoffDate5,sSubReport,sDatafileName5
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,0,With,Employment Status,Auto_Data_ABA1_1
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,0,Without,Employment Status,Auto_Data_ABA1_2
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,1,With ,Employment Status,Auto_Data_ABA1_3
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,2,0,With ,Employment Status,Auto_Data_ABA1_4
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2012,0,0,With ,Employment Status,Auto_Data_ABA1_5
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,0,With,Law School/University Funded Positions,Auto_Data_ABA2_1
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,0,Without,Law School/University Funded Positions,Auto_Data_ABA2_2
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,1,With ,Law School/University Funded Positions,Auto_Data_ABA2_3
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,2,0,With ,Law School/University Funded Positions,Auto_Data_ABA2_4
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2012,0,0,With ,Law School/University Funded Positions,Auto_Data_ABA2_5
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,0,With,Employment Type,Auto_Data_ABA3_1
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,0,Without,Employment Type,Auto_Data_ABA3_2
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,1,With ,Employment Type,Auto_Data_ABA3_3
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,2,0,With ,Employment Type,Auto_Data_ABA3_4
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2012,0,0,With ,Employment Type,Auto_Data_ABA3_5
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,0,With,Employment Location,Auto_Data_ABA4_1
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,0,Without,Employment Location,Auto_Data_ABA4_2
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,0,1,With ,Employment Location,Auto_Data_ABA4_3
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2013,2,0,With ,Employment Location,Auto_Data_ABA4_4
+ABA_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_ABA",Y,ABA Report (4),Texas_Law,2012,0,0,With ,Employment Location,Auto_Data_ABA4_5

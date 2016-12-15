@@ -1,0 +1,236 @@
+//var $suiteInfo= _suiteInfo();
+//$Username=$suiteInfo["UserName"];
+//$Password=$suiteInfo["Password"];
+//$sBuildType=$suiteInfo["BuildType"];
+//$sBaselineBuildNumber=$suiteInfo["Baseline_Build_Number"];
+//$sBuildNumber=$suiteInfo["Actual_Build_Number"];
+
+var $suiteInfo= _suiteInfo();
+$sUsr=$suiteInfo["UserName"];
+$sPasw=$suiteInfo["Password"];
+$sBuildType=$suiteInfo["BuildType"];
+$sBaselineBuildNumber=$suiteInfo["Baseline_Build_Number"];
+$sBuildNumber=$suiteInfo["Actual_Build_Number"];
+
+//Credentials Data QA
+//$Username="dataqa@12twenty.com";
+//$Password="wfcs923$23Wag";
+//Credentials Stage
+//$sUsr = "pprakash@thoughtframeworks.com"; 
+//$sPasw = "Salaryview1!";
+//Data QA Site URLs
+$CC_Url="http://columbia.admin.data-12twenty.com/Login";
+$Url_George="http://msb-georgetown.admin.data-12twenty.com/";
+$Dartmouth_Url="http://mba-tuck-dartmouth.admin.data-12twenty.com/";
+$UCLA_Url="http://anderson-ucla.admin.data-12twenty.com/";
+$Fordham_Url="http://fordham.admin.data-12twenty.com/";
+/*********File Saved Locations***********/
+//$path_datafile="D:/Sahipro/userdata/12twenty_Phase2\\excels\\Data QA Master Tracker - Automated_V4.xlsx";
+//$path_baseline ="D:\\Allworkspace\\12TwentyReport\\Baseline\\Build_No"+"_"+$sBaselineBuildNumber+"\\";
+//$sBaseline_dir="D:\\Allworkspace\\12TwentyReport\\Baseline/Build_No"+$sBaselineBuildNumber+"\\";
+//$path_actual="D:\\Allworkspace\\12TwentyReport\\Actual\\Build_No"+"_"+$sBuildNumber+"\\";
+//$path_actual=$sAcual_dir+"\\";
+//$path_temp="D:\\Allworkspace\\Temporary\\Temp_";
+// $sTemp_dir ="D:\\Allworkspace\\Temporary";
+$path_baseline ="D:\\Scripts\\Sahi\\Phase2\\Baseline\\Build_No"+"_"+$sBaselineBuildNumber+"\\";
+//Baseline directory
+$sBaseline_dir="D:\\Scripts\\Sahi\\Phase2\\Baseline/Build_No"+$sBaselineBuildNumber+"\\";
+
+//Actual directory
+$sAcual_dir="D:\\Scripts\\Sahi\\Phase2\\Actual\\Build_No"+"_"+$sBuildNumber+"\\";
+//Actual path for files
+$path_actual=$sAcual_dir+"\\";
+//Temporary files path
+$path_temp="D:\\Scripts\\Sahi\\Phase2\\Temporary\\Temp_";
+//Temporary directory
+$sTemp_dir ="D:\\Scripts\\Sahi\\Phase2\\Temporary";
+/*********Columbia centralized********/
+$sRunStatusValue="Y";
+$sSiteName="Columbia Centralized";
+$sub="Salary Statistics by Major";
+$col="Columbia College";
+$dept="Business";
+$ugmajor="All Majors";
+//Data File
+$col_RunStatus="Run Status";
+$col_Site="Site Instance";
+$col_Report="Sub Report";
+$col_DataFile="DataFileName";
+$col_GradCls="Grad Class";
+$col_GradTrm="Grad Term";
+$col_DegrLelv="Degree Level";
+$col_colg="College / School";
+$col_Prog="Program";
+$col_UndrMaj="Undergrad Major";
+
+
+	/********Resumes**********/
+$sSiteName1="Dartmouth FTMBA";
+$sub1="ResumeView";
+$sResumeSearch="resumeText";
+$sDesirdInd="DesiredIndustry";
+$sDesirdFunct="DesiredFunction";
+$sDesirdCit="city";
+$sResumeUpl="ResumeSearchType";
+$col_StdGrp="Student Group";
+$col_KeyWord="Keyword Search";
+$col_DesirInd="Desired Industry";
+$col_DesirFunc="Desired Function";
+$col_DesirCity="Desired City";
+$col_WorkExp="Work Experience";
+$col_PreInd="Industry (Pre MBA)";
+$col_PreFunc="Function (Pre MBA)";
+$col_LangSpok="Language Spoken";
+$col_LangWrit="Language Written";
+$col_ResumUp="Resume Uploaded";
+$sbtn_Resume="All";
+$btn_CTRL="CTRL";
+
+/*********Contacts*********/
+$sub2="Contact Directory";
+$ch_EmpName="Employer Name";
+$ch_JobTi="Job Title";
+$ch_Ind="Industry";
+$ch_Alum="Is Alumni";
+$ch_AlumYear="Alumni Graduation Year";
+$ch_Ci="City";
+$ch_Metro="Metro Area";
+$ch_USState="US State / Canada Province";
+$ch_Coun="Country";
+$ch_NorRegion="North America Region";
+$ch_WorRegion="World Region";
+$ch_PriCont="Is Primary Contact";
+$col_Contact_Report="Report";
+$col_Contact_Column="Column";
+$col_Contact_SubCol="Sub Column";
+
+/********Job Postings*********/
+$s_city="City";
+$s_metro="Metro Area";
+$s_state="State";
+$s_nar="North American Region";
+$s_cntry="Country";  
+$col_jobPhase="Job Phase";
+$col_jobType="Job Type";
+$col_Intr="Interview Type";
+$col_StdGrop="Student Group";
+$col_jobPosStat="Job Posting Status";
+$col_RegStat="Registration Status";
+$col_EmpName="Employer Name";
+$col_JobTitle="Job Title";
+$col_JobIndus="Job Industry";
+$col_JobFunct="Job Function";
+$col_Loc="Location";
+$col_LocFilt="Location Filter";
+$col_USWork="US Work Auth Requirement";
+$col_RecrutYear="Recruiting Year";
+$col_PostDate="Posted Date";
+$col_AppDueDate="Application Due Date";
+$col_CmpnyPres="Company Presentation";
+$col_RoomAssign="Room Assignment Status";
+$col_BiddingRound="Bidding Round";
+
+/*******Companies**********/
+$sub4="Company Directory";
+$sdJobPhase = "Job Phase";
+$sdIndustry = "Industry";
+$sdFunction = "Function";
+$sdCompanySize = "Company Size";
+$sdLocation = "Location";
+$sdLocationFilter = "Location Filter";
+$sdAccountManager = "Account Manager";
+$sdOutreachLead = "Outreach Lead";
+$sdOutreachPriority = "Outreach Priority";
+$s_nar_Cmny="N. American Region";
+$col_All="All";
+
+/**********Events********/
+$sdJobPhase = "Job Phase";
+$sdIndustry = "Industry";
+$sdFunction = "Function";
+$sdCompanySize = "Company Size";
+$sdLocation = "Location";
+$sdLocationFilter = "Location Filter";
+$sdAccountManager = "Account Manager";
+$sdOutreachLead = "Outreach Lead";
+$sdOutreachPriority = "Outreach Priority";
+$col_Events_stdGrp="Student Group";
+$col_EventType="Event Type";
+$col_EventFormat="Event Format";
+$col_EventTime="Event Timeline";
+$col_EventName="Employer Name";
+$col_EventInd="Industry";
+$col_EventSrc="Event Source";
+$col_EventStatus="Event Status";
+
+/*******Student View*******/
+$sSiteName2="Georgetown Business";
+$sReport1="Outcomes Index";
+$sReport2="Salary Database";
+$col_Attr="Attribute";
+$col_AttrType="Attribute Type";
+$col_NW="School/Network";
+$col_Porgram="Program";
+$col_JobPhase="Job Phase";
+$col_PayType="Pay Type";
+$col_PayPeriode="Pay Period";
+$col_GradYear="Graduation Year";
+$col_OfferStat="Offer Status";
+$col_SponserJob="Exclude Sponsored Jobs";
+$col_Sort="Sort By";
+
+/*******Student Tracking*******/
+//UCLA
+$sSiteName3="UCLA FTMBA";
+$sub3="Student Tracking";
+$ch_gradYear="Graduation Class";
+$ch_jointDegree="Joint Degree";
+$ch_DegreeType="Joint Degree Type";
+$ch_mbaYear="MBA Graduation Year";
+$ch_acdSec="Academic Section";
+$ch_acaSpec="Academic Specialization";
+$ch_gender="Gender";
+$ch_workCons="Work Authorization (Consolidated)";
+$ch_workDetail="Work Authorization (Detailed)";
+$ch_workExp="Years Experience (Consolidated)";
+$ch_citizen="Country of Citizenship";
+$ch_desirFunc="Desired Function";
+$ch_desirInd="Desired Industry";
+$ch_desirCity="Desired City";
+$ch_enroll="Enrolled";
+$ch_sign="Signup Status";
+$ch_assign="Assigned Advisor";
+$ch_act="Activity Stream";
+$col_StdTrc_Report="Report";
+$col_StdTrc_PG="Post Grad Reported Outcome";
+$col_Outcome="Outcome Breakdown";
+$col_Rumor="Rumor Jobs";
+$col_StdTrcValue1="Col1";
+$col_StdTrcValue2="Col2";
+$sCase_PgGrad="Post Grad Reported Outcome";
+$sCase_SeekEmploy="Seeking Employment";
+$sCase_NotSeekEmpl="Not Seeking Employment";
+$sCase_NoReportOut="No Reported Outcomes";
+$sCase_SeekGrad="Seeking Graduate School";
+//Fordham Centralized
+$sSiteName4="Fordham Centralized";
+//$sub4
+$ch_DegreeLevel="Degree Level";
+$ch_Degree="Degree";
+$ch_UndGrad="Undergraduate Major - Consolidated";
+$ch_gradYear="Graduation Year";
+$ch_UndrMajor="Undergraduate Major";
+$ch_UndrMinor="Undergraduate Minor";
+$ch_Collg="College";
+$ch_Military="Military Service";
+$ch_Employ="What approximate date did you begin looking for employment?";
+$ch_Visits="Career Service Visits";
+$ch_Cmpltd="Internships Completed";
+
+
+
+
+
+
+
+

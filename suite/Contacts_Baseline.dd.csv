@@ -1,0 +1,13 @@
+#script,url,tags,sRunStatus,sSite,sReportName,sContact_filter,sContact_value,sContact_subvalue,sDatafileName
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,Employer Name,Deloite,,Auto_Data_ContactDirectory_1
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,Job Title,Consulting,,Auto_Data_ContactDirectory_2
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,Industry,Consulting ,,Auto_Data_ContactDirectory_3
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,Is Alumni,Yes,,Auto_Data_ContactDirectory_4
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,Alumni Graduation Year,2005,2010,Auto_Data_ContactDirectory_5
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,City,Boston,,Auto_Data_ContactDirectory_6
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,Metro Area,Boston-Worcester-Manchester -- MA-NH,,Auto_Data_ContactDirectory_7
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,US State / Canada Province,Connecticut,,Auto_Data_ContactDirectory_8
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,Country,United States,,Auto_Data_ContactDirectory_9
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,North America Region,Northeast,,Auto_Data_ContactDirectory_10
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,World Region,North America,,Auto_Data_ContactDirectory_11
+Contacts_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Contacts",Y,Georgetown Business,Contact Directory,Is Primary Contact,Yes,,Auto_Data_ContactDirectory_12

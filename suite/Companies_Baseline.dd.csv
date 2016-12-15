@@ -1,0 +1,20 @@
+#script,url,tags,sRunStatus,sSite,sReportName,sJobPhase,sIndustry,sFunction,sCompanySize,sLocation,sLoc_Filter,sAccountManager,sOutreachLead,sOutreachPriority,sDatafileName
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,,,All,All,All,Auto_Data_CompanyDirectory_1
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,,,All,All,All,Auto_Data_CompanyDirectory_2
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Internship,All,All,All,,,All,All,All,Auto_Data_CompanyDirectory_3
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,Consulting,All,All,,,All,All,All,Auto_Data_CompanyDirectory_4
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,"Government,Aerospace/Defense,Hospitality,Manufacturing and Transportation",All,All,,,All,All,All,Auto_Data_CompanyDirectory_5
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,Consulting,All,,,All,All,All,Auto_Data_CompanyDirectory_6
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,"Marketing - Market Research / Analytics, Marketing - Product Management, Marketing / Sales",All,,,All,All,All,Auto_Data_CompanyDirectory_7
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,201-500,,,All,All,All,Auto_Data_CompanyDirectory_8
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,"501-1000,1001-5000",,,All,All,All,Auto_Data_CompanyDirectory_9
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,City,Boston - MA,All,All,All,Auto_Data_CompanyDirectory_10
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,Metro Area,Boston - Worcester - Manchester --MA,All,All,All,Auto_Data_CompanyDirectory_11
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,State,Connecticut,All,All,All,Auto_Data_CompanyDirectory_12
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,NorthAmerican,Northeast,All,All,All,Auto_Data_CompanyDirectory_13
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,Country,United States,All,All,All,Auto_Data_CompanyDirectory_14
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,,,Doreen Amorosa,All,All,Auto_Data_CompanyDirectory_15
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,,,Larry Verbiest,All,All,Auto_Data_CompanyDirectory_16
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,,,All,Carin Gendell,All,Auto_Data_CompanyDirectory_17
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,,,All,All,1 - High,Auto_Data_CompanyDirectory_18
+Companies_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Companies",Y,Georgetown Business,Employers,Post MBA,All,All,All,,,All,All,"2 - Medium,3 - Low",Auto_Data_CompanyDirectory_19

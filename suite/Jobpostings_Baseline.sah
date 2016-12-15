@@ -1,0 +1,5 @@
+_include("../base/12TwentyKeyword_Phase2.sah");
+JobPosting_Baseline($sRunStatus, $sSite, $sReportName, $sJobPhase, $sJobType, $sInterviewType, $sStudentGroup, 
+                             $sJobPostingStatus, $sRegistrationStatus, $sEmployerName, $sJobTitle, $sJobIndustry, $sJobFunction, 
+                             $sLocation, $sLoc_Filter, $sUSWorkAuth, $sRecruitingYear, $sPostedDate, $sAppDueDate, $sAppDueDate1,
+                             $sCompanyPresen,	$sRoomAssign, $sBiddingRound, $sDatafileName);

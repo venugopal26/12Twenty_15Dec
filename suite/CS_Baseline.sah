@@ -1,0 +1,3 @@
+_include("../base/Keyword.sah");
+ClassStatus_Baseline($sRunStatus ,$sSiteType6, $sSite, $sGradYear6, $sGradTerm6, $sOfferTiming6, $sJobPhase6, $sWorkAuth6, $sEmpType6, $sRumorJob6,
+                              				$sIncludeRoport6, $sDegreelevel6, $sCollege6, $sProgram6, $sUndergradMajor6, $sDatafileName6)

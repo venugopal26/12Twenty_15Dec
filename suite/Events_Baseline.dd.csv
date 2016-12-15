@@ -1,0 +1,13 @@
+#script,url,tags,sRunStatus,sSite,sAdmin_Std,sReportName,sStudentGroup,sEventType,sEventFormate,sEventTimeline,sEmployerName,sIndustry,sEventSource,sEventStatus,sDatafileName
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,All,All,All,,All,All,All,Auto_Data_Event_1
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,Full-Time Job Candidates,All,All,All,,All,All,All,Auto_Data_Event_2
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,Company Presentation,All,All,,All,All,All,Auto_Data_Event_3
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,Job Fair,All,All,,All,All,All,Auto_Data_Event_4
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,All,On Campus,All,,All,All,All,Auto_Data_Event_5
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,All,Off Campus,All,,All,All,All,Auto_Data_Event_6
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,All,All,All,,All,All,All,Auto_Data_Event_7
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,All,All,All Past,,All,All,All,Auto_Data_Event_8
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,All,All,All,"Amazon, Inc.",All,All,All,Auto_Data_Event_9
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,All,All,All,,Consulting,All,All,Auto_Data_Event_10
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,All,All,All,,All,Career Center Event,All,Auto_Data_Event_11
+Event_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Events",Y,Georgetown Business,Admin,Events,All,All,On Campus,All,,Consulting,All,All,Auto_Data_Event_12

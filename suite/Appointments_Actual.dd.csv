@@ -1,0 +1,7 @@
+#script,url,tags,sRunStatus,sSite,sReportName,sAdvise,sAppointmentType,sBlockType,sDatafileName
+Appoint_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Appointments",Y,Georgetown Business,appointments,Eric Young,All,0,Auto_Data_Appointments_1
+Appoint_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Appointments",Y,Georgetown Business,appointments,All,General Coaching Appointment,0,Auto_Data_Appointments_2
+Appoint_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Appointments",Y,Georgetown Business,appointments,All,"General Coaching Appointment, Mock Case Interview",0,Auto_Data_Appointments_3
+Appoint_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Appointments",Y,Georgetown Business,appointments,All,All,1,Auto_Data_Appointments_4
+Appoint_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Appointments",Y,Georgetown Business,appointments,All,All,2,Auto_Data_Appointments_5
+Appoint_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Appointments",Y,Georgetown Business,appointments,All,"General Coaching Appointment, Mock Case Interview",1,Auto_Data_Appointments_6

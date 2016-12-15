@@ -1,0 +1,3 @@
+_include("../base/12TwentyKeyword_Phase2.sah");
+Resumes_Actual($sRunStatus, $sSite, $sReportName, $sStdGrp, $sSearch, $sDesirInd, $sDesirFunc, $sDesirCity, $sExp, $sInd, 
+						$sFunc, $sLangSpoke, $sLangWrit, $sUpload, $sDatafileName)

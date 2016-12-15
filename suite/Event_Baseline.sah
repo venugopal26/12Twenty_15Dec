@@ -1,0 +1,3 @@
+_include("../base/12TwentyKeyword_Phase2.sah");
+Event_Baseline($sRunStatus, $sSite, $sAdmin_Std, $sReportName, $sStudentGroup, $sEventType, $sEventFormate,
+  									$sEventTimeline, $sEmployerName, $sIndustry,$sEventSource, $sEventStatus, $sDatafileName);

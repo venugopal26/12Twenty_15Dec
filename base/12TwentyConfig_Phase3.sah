@@ -1,0 +1,57 @@
+//File which has data values
+var $suiteInfo= _suiteInfo();
+$sUsername=$suiteInfo["UserName"];
+$sPassword=$suiteInfo["Password"];
+$sBuildType=$suiteInfo["BuildType"];
+$sBuildNumber=$suiteInfo["Actual_Build_Number"];
+$sBaselineBuildNumber=$suiteInfo["Baseline_Build_Number"];
+
+//Site Access
+$UCLA_LAW = "http://law-ucla.admin.data-12twenty.com/";
+$Harvard_FTMBA="http://mba-business-harvard.admin.data-12twenty.com/";
+$Texas_FTMBA="http://mba-mccombs-texas.admin.data-12twenty.com/";
+$UNC_Centralized="http://unc.admin.data-12twenty.com/";
+$Columbia_Centralized="http://columbia.admin.data-12twenty.com/";
+$Ohio_BSBA="http://bsba-fisher-osu.admin.data-12twenty.com/Login";
+$Standford_FTMBA="http://business-gsb-stanford.admin.data-12twenty.com/";
+$GWU_LAW="http://law-gwu.admin.data-12twenty.com/";
+//File paths
+$path_baseline ="D:\\Scripts\\Sahi\\Phase3\\Baseline\\Build_No"+"_"+$sBaselineBuildNumber+"\\";
+//Baseline directory
+$sBaseline_dir="D:\\Scripts\\Sahi\\Phase3\\Baseline/Build_No"+$sBaselineBuildNumber+"\\";
+//Actual directory
+$sAcual_dir="D:\\Scripts\\Sahi\\Phase3\\Actual\\Build_No"+"_"+$sBuildNumber+"\\";
+//Actual path for files
+$path_actual=$sAcual_dir+"\\";
+//Temporary files path
+$path_temp="D:\\Scripts\\Sahi\\Phase3\\Temporary\\Temp_";
+//Temporary directory
+$sTemp_dir ="D:\\Scripts\\Sahi\\Phase3\\Temporary";
+//Run status
+$sRunStatusValue="Y";
+//SiteInstanceType
+$scLawType = "Law";
+$scFtmba = "FTMBA";
+$scCentralized = "Centralized";
+$scBsba = "BSBA";
+
+//SiteInstance
+$scUcla="UCLA Law";
+$scHarvard="Harvard FTMBA";
+$scTexas="Texas FTMBA";
+$scUnc ="UNC - Centralized";
+$scColumbia="Columbia - Centralized";
+$scOhio="Ohio State - BSBA";
+$scStanford="Standford";
+$scGwl="GWU Law";
+
+$btn_all="All";
+
+//UCLA
+$link_siteUsage="Site Usage Summary";
+$link_stdOutcomes="Student Outcomes";
+$link_salaryStatics="Salary Statistics by Major";
+$link_fisrDest="First Destination by Major";
+
+//Stanford
+$link_empProgress="Employment Search Progress";

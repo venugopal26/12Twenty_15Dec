@@ -1,0 +1,41 @@
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear2,sGradTerm2,sJobPhase, sJointDegree,sReportingMajor,sDegreelevel,sCollege,sProgram,sOfferTiming,sCutoffDate ,sSubReport,sDatafileName2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,Forgone Salary,Auto_Data_BW_Table_Q45_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,Forgone Salary,Auto_Data_BW_Table_Q45_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,Forgone Salary,Auto_Data_BW_Table_Q45_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,Forgone Salary,Auto_Data_BW_Table_Q45_4
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,Overall Employment,Auto_Data_BW_Table_Q75_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,Overall Employment,Auto_Data_BW_Table_Q75_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,Overall Employment,Auto_Data_BW_Table_Q75_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,Overall Employment,Auto_Data_BW_Table_Q75_4
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,Top 15 Employers,Auto_Data_BW_Table_Q79_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,Top 15 Employers,Auto_Data_BW_Table_Q79_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,Top 15 Employers,Auto_Data_BW_Table_Q79_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,Top 15 Employers,Auto_Data_BW_Table_Q79_4
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,"Base Salary, Signing Bonus, & Other Guaranteed Compensation",Auto_Data_BW_Table_Q80_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,"Base Salary, Signing Bonus, & Other Guaranteed Compensation",Auto_Data_BW_Table_Q80_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,"Base Salary, Signing Bonus, & Other Guaranteed Compensation",Auto_Data_BW_Table_Q80_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,"Base Salary, Signing Bonus, & Other Guaranteed Compensation",Auto_Data_BW_Table_Q80_4
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by Functional Area,Auto_Data_BW_Table_Q83_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,Base Salary by Functional Area,Auto_Data_BW_Table_Q83_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,Base Salary by Functional Area,Auto_Data_BW_Table_Q83_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by Functional Area,Auto_Data_BW_Table_Q83_4
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by Industry ,Auto_Data_BW_Table_Q84_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,Base Salary by Industry ,Auto_Data_BW_Table_Q84_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,Base Salary by Industry ,Auto_Data_BW_Table_Q84_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by Industry ,Auto_Data_BW_Table_Q84_4
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by Geographic Region,Auto_Data_BW_Table_Q85_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,Base Salary by Geographic Region,Auto_Data_BW_Table_Q85_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,Base Salary by Geographic Region,Auto_Data_BW_Table_Q85_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by Geographic Region,Auto_Data_BW_Table_Q85_4
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by North America Region,Auto_Data_BW_Table_Q86_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,Base Salary by North America Region,Auto_Data_BW_Table_Q86_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,Base Salary by North America Region,Auto_Data_BW_Table_Q86_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by North America Region,Auto_Data_BW_Table_Q86_4
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by Experience Level,Auto_Data_BW_Table_Q87_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,Base Salary by Experience Level,Auto_Data_BW_Table_Q87_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,Base Salary by Experience Level,Auto_Data_BW_Table_Q87_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,Base Salary by Experience Level,Auto_Data_BW_Table_Q87_4
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,0,--,--,--,--,--,--,--,--,Internships,Auto_Data_BW_Table_Q90_1
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2014,1,--,--,--,--,--,--,--,--,Internships,Auto_Data_BW_Table_Q90_2
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Texas_FTMBA,2013,0,--,--,--,--,--,--,--,--,Internships,Auto_Data_BW_Table_Q90_3
+BWR_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_BWR",Y,Business Week Report (10),Harvard_FTMBA,2014,0,--,--,--,--,--,--,--,--,Internships,Auto_Data_BW_Table_Q90_4

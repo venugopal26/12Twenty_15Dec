@@ -1,0 +1,59 @@
+#script,url,tags,sRunStatus,sSite,sReportName,sPg_Outcome,sOutcome_Breakdown,sRumor_Job,sAcademic,StdVal1,StdVal2,sDatafileName
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,0,NA,NA,NA,,,Auto_Data_UCLA_StudentTracking_1
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,1,0,NA,NA,,,Auto_Data_UCLA_StudentTracking_2
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,1,1,0,NA,,,Auto_Data_UCLA_StudentTracking_3
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,1,1,1,NA,,,Auto_Data_UCLA_StudentTracking_4
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,1,1,2,NA,,,Auto_Data_UCLA_StudentTracking_5
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,1,1,3,NA,,,Auto_Data_UCLA_StudentTracking_6
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,1,2,0,NA,,,Auto_Data_UCLA_StudentTracking_7
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,1,3,NA,NA,,,Auto_Data_UCLA_StudentTracking_8
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,1,4,NA,NA,,,Auto_Data_UCLA_StudentTracking_9
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,1,5,0,NA,,,Auto_Data_UCLA_StudentTracking_10
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,2,0,NA,NA,,,Auto_Data_UCLA_StudentTracking_11
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,2,5,NA,NA,,,Auto_Data_UCLA_StudentTracking_12
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,2,4,NA,NA,,,Auto_Data_UCLA_StudentTracking_13
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,2,2,NA,NA,,,Auto_Data_UCLA_StudentTracking_14
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,3,NA,NA,NA,,,Auto_Data_UCLA_StudentTracking_15
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,4,NA,NA,NA,,,Auto_Data_UCLA_StudentTracking_16
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,5,0,NA,NA,,,Auto_Data_UCLA_StudentTracking_17
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,5,1,NA,NA,,,Auto_Data_UCLA_StudentTracking_18
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,5,2,NA,NA,,,Auto_Data_UCLA_StudentTracking_19
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Post Grad Reported Outcome,6,NA,NA,NA,,,Auto_Data_UCLA_StudentTracking_20
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Graduation Year,NA,NA,NA,NA,2016,Winter 2016,Auto_Data_UCLA_StudentTracking_21
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Joint Degree,NA,NA,NA,NA,Yes,,Auto_Data_UCLA_StudentTracking_22
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Joint Degree Type,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_23
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Graduation Year,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_24
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Academic Section,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_25
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Academic Specialization,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_26
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Gender,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_27
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Work Authorization (Consolidated),NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_28
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Work Authorization (Detailed),NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_29
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Years Experience (Consolidated),NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_30
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Country of Citizenship,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_31
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Desired Function,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_32
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Desired Industry,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_33
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Desired City,NA,NA,NA,NA,Boston - MA,,Auto_Data_UCLA_StudentTracking_34
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Enrolled,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_35
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Signed Up Status,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_36
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Assigned Adviser,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_37
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,UCLA FTMBA,Activity Stream,NA,NA,NA,NA,1,,Auto_Data_UCLA_StudentTracking_38
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Post Grad Reported Outcome,0,NA,NA,NA,,,Auto_Data_FC_StudentTracking_39
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Post Grad Reported Outcome,1,0,NA,NA,,,Auto_Data_FC_StudentTracking_40
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Post Grad Reported Outcome,1,2,0,NA,,,Auto_Data_FC_StudentTracking_41
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Post Grad Reported Outcome,1,3,0,NA,,,Auto_Data_FC_StudentTracking_42
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Post Grad Reported Outcome,1,4,0,NA,,,Auto_Data_FC_StudentTracking_43
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Post Grad Reported Outcome,2,0,NA,NA,,,Auto_Data_FC_StudentTracking_44
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Post Grad Reported Outcome,2,1,NA,NA,,,Auto_Data_FC_StudentTracking_45
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Post Grad Reported Outcome,3,0,NA,NA,,,Auto_Data_FC_StudentTracking_46
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Post Grad Reported Outcome,6,NA,NA,NA,,,Auto_Data_FC_StudentTracking_47
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Degree Level,NA,NA,NA,NA,1,,Auto_Data_FC_StudentTracking_48
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Degree,NA,NA,NA,NA,1,,Auto_Data_FC_StudentTracking_49
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Undergraduate Major - Consolidated,NA,NA,NA,NA,1,,Auto_Data_FC_StudentTracking_50
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Graduation Year,NA,NA,NA,NA,2017,,Auto_Data_FC_StudentTracking_51
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Undergraduate Major,NA,NA,NA,NA,1,,Auto_Data_FC_StudentTracking_52
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Undergraduate Minor,NA,NA,NA,NA,1,,Auto_Data_FC_StudentTracking_53
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,College,NA,NA,NA,NA,3,,Auto_Data_FC_StudentTracking_54
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Military Service,NA,NA,NA,NA,Yes,,Auto_Data_FC_StudentTracking_55
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Approximately when did you begin looking for employment or other post graduation activity?,NA,NA,NA,NA,8/10/2015,2/19/2016,Auto_Data_FC_StudentTracking_56
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Career Service Visits,NA,NA,NA,NA,0,,Auto_Data_FC_StudentTracking_57
+StudentTrack_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_Student-track",Y,Fordham Centralized,Internships Completed,NA,NA,NA,NA,0,,Auto_Data_FC_StudentTracking_58

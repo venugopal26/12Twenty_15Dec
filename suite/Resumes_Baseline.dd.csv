@@ -1,0 +1,18 @@
+#script,url,tags,sRunStatus,sSite,sReportName,sStdGrp,sSearch,sDesirInd,sDesirFunc,sDesirCity,sExp,sInd,sFunc,sLangSpoke,sLangWrit,sUpload,sDatafileName
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,All,All,All,All,All,Auto_Data_ResumeView_1
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,FTMBA,,All,All,,All,All,All,All,All,All,Auto_Data_ResumeView_2
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,Intern,All,All,,All,All,All,All,All,All,Auto_Data_ResumeView_3
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,Consulting,,All,All,All,All,All,All,Auto_Data_ResumeView_4
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,Boston - MA,All,All,All,All,All,All,Auto_Data_ResumeView_5
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,"More than one year, up to three years",All,All,All,All,All,Auto_Data_ResumeView_6
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,"More than three years, up to five years|More than five years",All,All,All,All,All,Auto_Data_ResumeView_7
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,Consulting,All,All,All,All,Auto_Data_ResumeView_8
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,Energy & CleanTech|Manufacturing and Transportation,All,All,All,All,Auto_Data_ResumeView_9
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,All,Consulting,All,All,All,Auto_Data_ResumeView_10
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,All,Finance/Accounting|Marketing/Sales,All,All,All,Auto_Data_ResumeView_11
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,All,All,English,All,All,Auto_Data_ResumeView_12
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,All,All,English|Spanish,All,All,Auto_Data_ResumeView_13
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,All,All,All,English[1],All,Auto_Data_ResumeView_14
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,All,All,All,English[1]|Spanish[1],All,Auto_Data_ResumeView_15
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,All,All,All,All,Primary Only,Auto_Data_ResumeView_16
+Resumes_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_Resumes",Y,Georgetown Business,ResumeView,All,,All,All,,All,All,All,All,All,Non-Primary Only,Auto_Data_ResumeView_17

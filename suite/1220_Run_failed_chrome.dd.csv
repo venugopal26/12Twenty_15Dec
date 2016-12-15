@@ -1,0 +1,14 @@
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear4,sGradTerm4,sOfferTiming4,sCutoffDate4,sSubReport,sDatafileName4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP,Baseline",Y,NALP Report (16),UCLA_Law,2013,0,0,With,Graduate Demographics,Auto_Data_NALP_Table_1_1
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear4,sGradTerm4,sOfferTiming4,sCutoffDate4,sSubReport,sDatafileName4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP,Baseline",Y,NALP Report (16),UCLA_Law,2013,0,0,Without,Graduate Demographics,Auto_Data_NALP_Table_1_2
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear4,sGradTerm4,sOfferTiming4,sCutoffDate4,sSubReport,sDatafileName4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP,Baseline",Y,NALP Report (16),UCLA_Law,2013,0,1,With,Graduate Demographics,Auto_Data_NALP_Table_1_3
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear4,sGradTerm4,sOfferTiming4,sCutoffDate4,sSubReport,sDatafileName4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP,Baseline",Y,NALP Report (16),UCLA_Law,2013,0,0,With,Graduate Demographics,Auto_Data_NALP_Table_1_4
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear4,sGradTerm4,sOfferTiming4,sCutoffDate4,sSubReport,sDatafileName4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP,Baseline",Y,NALP Report (16),UCLA_Law,2012,0,0,With,Graduate Demographics,Auto_Data_NALP_Table_1_5
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear4,sGradTerm4,sOfferTiming4,sCutoffDate4,sSubReport,sDatafileName4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP,Baseline",Y,NALP Report (16),UCLA_Law,2013,0,0,With,Employment Status by Gender,Auto_Data_NALP_Table_2_1
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear4,sGradTerm4,sOfferTiming4,sCutoffDate4,sSubReport,sDatafileName4
+NALP_Baseline.sah,http://sahitest.com/demo/,"Baseline_All,Baseline_NALP,Baseline",Y,NALP Report (16),UCLA_Law,2013,0,0,Without,Employment Status by Gender,Auto_Data_NALP_Table_2_2

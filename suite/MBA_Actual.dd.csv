@@ -1,0 +1,121 @@
+#script,url,tags,sRunStatus,sSiteType,sSite,sGradYear1,sGradTerm1,sJobPhase1,sJointDegree1,sProgram1,sSubReport,sDatafileName1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,The Graduating Class (A),Auto_Data_MBACSEA_Table_1A_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,The Graduating Class (B),Auto_Data_MBACSEA_Table_1B_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,Timing of First Job Offer,Auto_Data_MBACSEA_Table_2A_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,Timing of Job Acceptances,Auto_Data_MBACSEA_Table_2B_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,Primary Source of Full Time Job Acceptances,Auto_Data_MBACSEA_Table_3A_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,Compensation Report,Auto_Data_MBACSEA_Table_4A_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,Compensation Report,Auto_Data_MBACSEA_Table_4A_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,Compensation Report,Auto_Data_MBACSEA_Table_4A_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,Compensation Report,Auto_Data_MBACSEA_Table_4A_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,Compensation Report,Auto_Data_MBACSEA_Table_4A_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,Compensation Report,Auto_Data_MBACSEA_Table_4A_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,Compensation Report,Auto_Data_MBACSEA_Table_4A_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,Compensation Report,Auto_Data_MBACSEA_Table_4A_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,Compensation Report,Auto_Data_MBACSEA_Table_4A_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,Compensation Report,Auto_Data_MBACSEA_Table_4A_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,Compensation by Professional Functions,Auto_Data_MBACSEA_Table_4B_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,Compensation by Industries,Auto_Data_MBACSEA_Table_4C_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,World Regions Breakdown,Auto_Data_MBACSEA_Table_4D_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,Compensation by North American Geographic Regions,Auto_Data_MBACSEA_Table_4E_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,Compensation by Undergraduate Major,Auto_Data_MBACSEA_Table_4F_10
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,0,--,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_1
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,1,--,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_2
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,0,2,--,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_3
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,0,1,0,--,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_4
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2014,1,0,0,--,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_5
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_FTMBA,2013,0,0,0,--,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_6
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,EMBA,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_7
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,DMBA,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_8
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Texas_PTMBA,2014,0,0,0,All,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_9
+MBA_Actual.sah,http://sahitest.com/demo/,"Actual_All,Actual_MBA",Y,MBA Standard Reports (12),Harvard_FTMBA,2014,0,0,0,--,Compensation by Professional Experience,Auto_Data_MBACSEA_Table_4G_10

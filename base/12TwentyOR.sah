@@ -1,0 +1,68 @@
+// File which has all identifier values
+
+//Login page
+$txt_UserName="Username";
+$txt_Password="Password";
+$btn_Login="Log in";
+
+
+//navigation to reports
+$link_Report="Reports";
+$tab_Standard_Report="Standard Reports";
+$tab_12twenty_Reports="12Twenty Reports";
+$link_student_Outcomes="Student Outcomes";
+$tab_mba_report ="MBA Standard Reports";
+$tab_bwr_report ="Bloomberg Businessweek";
+$tab_nace_report ="NACE";
+$tab_Nalp_Report = "NALP Reports";
+$tab_Aba_Report="ABA Report";
+
+//Generate
+$link_generate = "Generate";
+//Table ID
+$table_id="report-data" | "report-dataTable2" |"report_list";
+//$table_id="report-data|report-dataTable2|report_list";
+//$table_id3="online";
+//Table ID for BWR Reports(Q.83-Q87)
+$table_id2="base_salary";
+//List ID for BWR List Data
+$list_data ="bwr_salary_list";
+//Nalp class summary table id
+$table_id3="report-data2";
+//Select Filter Data
+$default_gradYear ="2016";
+$default_gradYear1="2017";
+$drp_dwn_gradYearId="GraduationYearId";
+$drp_dwn_gradTerm="GraduationTermId";
+$drp_dwn_degreeId="DegreeLevelId";
+$drp_dwn_job_PhaseId="JobPhaseId";
+$drp_dwn_workAuthId="ConsolidatedWorkAuthorizationId";
+$drp_dwn_empType="ConsolidatedIndustryId";
+$drp_dwn_empType_Law="ConsolidatedEmploymentTypeId";
+$drp_dwn_rumorJob="RumorJobOption";
+$drp_dwn_includeReport="OutcomeInclusionId";
+$drp_dwn_offerTimingId="OfferTimingId";
+$drp_dwn_underGradMajor="UndergradMajorId";
+$getResult="Get Results";
+$drp_dwn_collegeId="CollegeId";
+$drp_dwn_department="DepartmentId";
+$empType_Law="ConsolidatedEmploymentTypeId";
+$generateReport="Generate Report";
+$btn_all="All";
+$drp_dwn_programId="ProgramId";
+$btn_departmentAll="multiselect dropdown-toggle btn btn-default[1]";
+$txt_departSearch="African-American Studies";
+$drpdwn_offertiming = "SurveyPeriodId";
+$txtbox_cutoffdate = "LawCutoffDate";
+$drpdwn_jointDegree ="HasJointDegree";
+$get_primaryMajor_false ="GetPrimaryMajorsOnlyFalse";
+
+//Log Out
+$logout_icon ="glyphicon glyphicon-user";
+$btn_Logout="Log Out";
+
+
+
+
+
+

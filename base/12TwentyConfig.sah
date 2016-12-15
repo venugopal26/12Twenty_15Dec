@@ -1,0 +1,130 @@
+//File which has data values
+
+var $suiteInfo= _suiteInfo();
+$sUsername=$suiteInfo["UserName"];
+$sPassword=$suiteInfo["Password"];
+$sBuildType=$suiteInfo["BuildType"];
+$sBuildNumber=$suiteInfo["Actual_Build_Number"];
+$sBaselineBuildNumber=$suiteInfo["Baseline_Build_Number"];
+//Site Access
+$sUrlTexas_Law="http://law-texas.admin.data-12twenty.com";
+$sOhio_State_BSBA="http://bsba-fisher-osu.admin.data-12twenty.com";
+$sTexas_FTMBA="http://mba-mccombs-texas.admin.data-12twenty.com";
+$sHarvard_FTMBA="http://mba-business-harvard.admin.data-12twenty.com";
+$sUCLA_Law="http://law-ucla.admin.data-12twenty.com";
+$sColumbia_Centralized="http://columbia.admin.data-12twenty.com";
+$sUNC_Centralized="http://unc.admin.data-12twenty.com";
+$sFordham_Centralized="http://fordham.admin.data-12twenty.com";
+$sTexas_PTMBA="http://wp-mccombs-texas.admin.data-12twenty.com";
+//Login Credentials
+//$sUsername="dataqa@12twenty.com";
+//$sPassword="wfcs923$23Wag";
+$sRun_Status="Run status";
+//Suite Data
+$sData_MBA="MBA Standard Reports";
+$sData_BWR="Business Week Report";
+$sData_NACE="NACE Report";
+$sData_NALP="NALP Report";
+$sData_ABA="ABA Report";
+$sData_CS="Class Status";
+//Excel data columns
+$sdRunStat="Run status";
+$sdSiteType="Site Instance Type";
+$sdSiteInstanceType="Site Instance";
+$sdGraduationClass="Grad Class";
+$sdGraduationTerm="Grad Term";
+$sdOfferTime="Offer Timing";
+$sdJobPhase="Job Phase";
+$sdJointDegree="Joint Degree";
+$sdReportMajor="Reporting Major";
+$sdIncRumorJob="Include Rumor Jobs";
+$sdIncReporting="Included in Reporting";
+$sdDegreeLevel="Degree Level";
+$sdSc_Coll="College / School";
+$sdPro="Program";
+$sdUndGrdMajor="Undergrad Major";
+$sdCutDate="Cutoff Date";
+$sdSubRepo="Sub Report";
+$sdDataFile="DataFileName";
+//Excel data 
+//$sRunStatus="Y";
+$sRunStatusValue="Y";
+$sMBA_Site_Type="MBA Standard Reports (12)";
+$sSite_Texas_FTMBA="Texas_FTMBA";
+$sSite_Texas_PTMBA="Texas_PTMBA";
+$sSite_Harvard_FTMBA="Harvard_FTMBA";
+$sReport_Com="Compensation Report";
+$sBWR_Site_Type="Business Week Report (10)";
+$sSubReport_BWR1="Forgone Salary";
+$sSubReport_BWR2="Top 15 Employers";
+$sSubReport_BWR3="Internships";
+$sSubReport_BWR4="Overall Employment";
+$sSubReport_BWR5="Base Salary, Signing Bonus, & Other Guaranteed Compensation";
+$sNACE_Site_Type="NACE Report (7)";
+$sSite_Fordham="Fordham_Centralized";
+$sPro="Business";
+$sSearch_Nace="buss";
+$sColl="FC AT ROSE HILL";
+$sNALP_Site_Type="NALP Report (16)";
+$sABA_Site_Type="ABA Report (4)";
+$Site_Texas_Law="Texas_Law";
+$sDate="Without";
+$sCS_FTMBA_Site_Type="FTMBA";
+$sCS_BSBA_Site_Type="BSBA";
+$sCS_LAW_Site_Type="Law";
+$sCS_CENTRALIZED_Site_Type="Centralized";
+$sCS_Site_OhioState="Ohio_State_BSBA";
+$sCS_Site_UCLA="UCLA_Law";
+$sCS_Site_CC="Columbia_Centralized";
+$sCS_Site_UNC="UNC_Centralized";
+$sCS_Subreport="Internship";
+$sList_data=7;
+$sNalp_sum="Class Summary";
+//Path of the csv files
+$path_datafile="../excels/Data_QA_Tests.xlsx";
+//Baseline path for files
+$path_baseline ="D:\\Scripts\\Sahi\\Phase1\\Baseline\\Build_No"+"_"+$sBaselineBuildNumber+"\\";
+//Baseline directory
+$sBaseline_dir="D:\\Scripts\\Sahi\\Phase1\\Baseline/Build_No"+$sBaselineBuildNumber+"\\";
+
+//Actual directory
+$sAcual_dir="D:\\Scripts\\Sahi\\Phase1\\Actual\\Build_No"+"_"+$sBuildNumber+"\\";
+//Actual path for files
+$path_actual=$sAcual_dir+"\\";
+//Temporary files path
+$path_temp="D:\\Scripts\\Sahi\\Phase1\\Temporary\\Temp_";
+//Temporary directory
+$sTemp_dir ="D:\\Scripts\\Sahi\\Phase1\\Temporary";
+
+//Log Results
+$sMBA_Baseline1="MBA Standard Report Baseline Task -Passed";
+$sMBA_Baseline2="MBA Standard Report Baseline Task -Failed";
+$sBWR_Baseline1="Business Week Baseline Task-Passed";
+$sBWR_Baseline2="Business Week Baseline Task-Failed";
+$sNACE_Baseline1="NACE Baseline Task-Passed ";
+$sNACE_Baseline2="NACE Baseline Task-Failed ";
+$sNALP_Baseline1="NALP Baseline Task-Passed";
+$sNALP_Baseline2="NALP Baseline Task-Failed";
+$sABA_Baseline1="ABA Baseline Task-Passed";
+$sABA_Baseline2="ABA Baseline Task-Failed";
+$sCS_Baseline1="Class Status Baseline Task-Passed";
+$CS_Baseline2="Class Status Baseline Task-Failed";
+$MBA_Actual1="MBA Standard Report Actual Task-Passed";
+$MBA_Actual2="MBA Standard Report Actual Task-Failed";
+$sBWR_Actual1="Business Week Actual Task-Passed";
+$sBWR_Actual2="Business Week Actual Task-Failed";
+$sNACE_Actual1="NACE Actual Task-Passed ";
+$sNACE_Actual2="NACE Actual Task-Failed";
+$sNALP_Actual1="NALP Actual Task-Passed";
+$sNALP_Actual2="NALP Actual Task-Failed";
+$sABA_Actual1="ABA Actual Task-Passed";
+$sABA_Actual2="ABA Actual Task-Failed";
+$sCS_Actual1="Class Status Actual Task-Passed";
+$sCS_Actual2="Class Status Actual Task-Failed";
+
+
+
+
+
+
+

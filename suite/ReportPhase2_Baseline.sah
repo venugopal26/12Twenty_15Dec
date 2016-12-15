@@ -1,0 +1,3 @@
+_include("../base/12TwentyKeyword_Phase2.sah");
+CC_1220_Baseline( $sRunStatus, $sSite, $sReportName, $sgradYear, $sgradTerm, $sdegree, 
+                          				$scollege, $sprogram, $sUndergradMajor, $sDatafileName);

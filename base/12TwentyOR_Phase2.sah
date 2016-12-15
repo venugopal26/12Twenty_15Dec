@@ -1,0 +1,168 @@
+$txt_UserName="Username";
+$txt_Password="Password";
+$btn_Login="Log in";
+//Custom Reports
+$link_CustRepo="Custom Reports";
+
+//Columbia Centralized
+$link_reports = "Reports";
+$link_1220Reports="12Twenty Reports";
+//$link_subReport = "Salary Statistics by Major";
+$drpdwn_gradYear ="GraduationYearId";
+$drpdwn_gradTerm ="GraduationTermId";
+$btn_all = _button("All");
+$checkbox_select = "multiselect";
+$checkbox_select1 = "multiselect[22]";
+$drpdwn_Degree ="DegreeLevelId";
+$radio_underMajor = "GetPrimaryMajorsOnlyFalse";
+$generateReport ="Generate Report";
+$logout_icon ="glyphicon glyphicon-user";
+$btn_Logout="Log Out";
+
+$table_id="report-data" | "students" | "contacts" | "main custom-view-table"| "events" | "companies" | "main custom-report-table" | "rankings";
+$cc_salay_id=0;
+
+/********Resumes********/
+$link_csm="CSM";
+$link_resumes="Candidate Search";
+$btn_all="All";
+$btn_resumeResults="Get Results";
+$resume_count_id="num-results";
+$btn_Resu_Stdgrp=1;
+$btn_Resu_Exp=2;
+$btn_Resu_Ind=3;
+$btn_Resu_Func=4;
+$btn_Resu_LabgSpok=5;
+$btn_Resu_LangWrit=6;
+/***********JobPostings***********/
+$link_jobpost="OCI and Job Listings";
+$btn_jobStat="All[1]";
+$drpdwn_jobphase="job_phase";
+$drpdwn_jobtype="job_posting_job_type";
+$drpdwn_interview="job_posting_type";
+$drpdwn_jobstatus="job_posting_status";
+$drpdwn_regstatus="OciRequestStatus";
+$txt_empname="Employer Name:[1]";
+$txt_jobtitle="Job Title:";
+$btn_all_job="All";
+$link_city="City";
+$slct_locl="Job Phase:[1]";
+$link_metro="Metro Area";
+$link_state="State";
+$slct_loc="country";
+$link_nar="North American Region";
+$link_cntry="Country";
+$drpdwn_Workauth="work_auth_requirement";
+$drpdwn_year="year";
+$drpdwn_postyear="Posted Date";
+$drpdwn_appdue="ApplicationDeadlineStartDateFilter";
+$drpdwn_appdueEnd="ApplicationDeadlineEndDateFilter";
+$drpdwn_cmpnypres=10;
+$drpdwn_roomass=11;
+$drpdwn_bidding="biddingRoundId";
+$btn_JobIndust=1;
+$btn_JobFunc=2;
+
+/********** Companies************/
+$link_companyDirectory = "Company Tracking";
+//$link_eventManagement = "Events";
+$label_compDirectory_jobPhase = "Job Phase:";
+$label_compDirectory_industry = "Industry:";
+$label_compDirectory_function = "Function:";
+$label_compDirectory_location = "Location: City";
+$label_compDirectory_companySize = "Company Size:";
+$label_compDirectory_accountManager = "Account Manager:";
+$label_compDirectory_outreachLeadSetToMe   = "Outreach Lead: Set To Me";
+$label_compDirectory_outreachPriority= "Outreach Priority:"
+$btn_compDirectory_getResults = "Get Results";
+// location filter
+$txtbox_city = "ng-pristine ng-untouched ng-valid ng-isolate-scope tt-input ng-empty";				
+//$sLocation_city = "City";
+$txtbox_MetroArea= "ng-pristine ng-untouched ng-valid ng-isolate-scope tt-input ng-empty";
+//$sLocation_MetroArea = "Metro Area";
+//$sLocation_State = "State";
+$link_NAmericaRegion = "N. America Region"; 
+//$sLocation_Country = "Country"; 
+$btn_Comp_Ind="All"; 
+$btn_Comp_Func="All[1]";
+$btn_Comp_Size="All[2]";
+$btn_Comp_Manger="All[3]";
+$btn_Comp_Executive ="All[4]";
+$btn_Comp_Prio="All[5]";
+$cmpny_count_id="num-results ng-binding ng-scope";
+
+
+/************Contacts**************/
+$link_cmpnyTracking="Company Tracking";
+$link_contactDir="Contacts";
+$btn_addFilter= "Add Filter";
+$select_filter= "modal-body filter-selection-modal-content ng-scope";
+$btn_submitFilter = "Add Filter[1]";
+$btn_result = "Get Results";
+$txt_Contact_val1=3;
+$txt_Contact_JobTitl=2;
+$select_Contact_Indu=1;
+$num_Contact_val1=1;
+$num_Contact_val2=1;
+
+/********Student View**********/
+$link_StdView="Research Tools";
+$link_Change="change";
+$link_Func="Function";
+$link_OutCome="Outcomes Index";
+$link_Salary="Salary Database";
+$link_change_salary=27;
+$drpdwn_AttrType="attributeOptions";
+$drpdwn_sdataSharing="dataSharingCountryId";
+$drpdwn_PrgId="programId";
+$drpdwn_JobId="jobPhaseId";
+$drpdwn_PayCatg="PayCategory";
+$drpdwn_Peryear="perFormat";
+$drpdwn_Peryear_salary="PerFormat";
+$drpdwn_GradYearId="graduationYearId";
+$drpdwn_JobStatus="jobStatus";
+$drpdwn_ExcludeSponsers="excludeSponsoredJobs";
+$drpdwn_Sort="sortBy";
+$btn_Result="Get Results";
+$table_id_outcomes="rankings";
+$table_id_salarydb1="overallData";
+$table_id_salarydb2="dataByYear";
+$table_id_salarydb3="detailedResults";  
+$filters_fix = "current-filters clearfix";
+$floating_filterfix ="floating-filters filters filternoborder clearfix";
+
+/*********Student Tracking********/
+//UCLA
+$link_StudentTrc="Students";
+$ucla_ResultID="num-results ng-binding";
+$select_StdTrack_val1=1;
+$select_StdTrack_val2=2;
+$select_StdTrack_val3=3;
+$select_StdTrack_val4=4;
+$txt_StdTrack_txtval3=3;
+$txt_StdTrack_txtval4=4;
+$link_div=297;
+$btn_StdTrack="Add Filter[1]";
+$txt_countryId=1;
+/*****Event filters Elements identification*************/
+$link_eventManagement = "Events";
+$link_compDirectoryClearFilter = "Clear Filters";
+$label_studentGroup = "Student Group:";
+$label_EventType = "Event Type:";
+$dropdown_EventType = "event_type";
+$label_EventFormat = "Event Format:";
+$dropdown_EventFormat = "event_format";
+$label_EventTimeline = "Event Timeline:";
+$dropdown_eventTimeline ="EventTimelineCriterion";
+$label_eventName = "Employer Name:";
+$txtBox_employerName = "Employer Name:[1]";
+$label_industry = "Industry:";
+$dropdown_consolidatedIndustry = "consolidated_industry";
+$label_eventSource = "Event Source:";
+$dropdown_eventSource = "event_source";
+$label_eventStatus = "Event Status:";
+$dropdown_status = "StatusId";
+$btn_getResults = "Get Results";
+/*******Appointments*********/
+$AppointmentType="1";
+$calender_id="3";

@@ -1,0 +1,796 @@
+function onScriptError($e) {
+	return onScriptErrorDefault($e);
+}
+
+function onScriptErrorDefault($e) {
+	if ($e.isBrowserNotResponding) {
+		if (!_isPhantomJS()) {
+			_lockWindow();
+            _focusWindow();
+            _wait(2000);
+            _takeScreenShot();
+            _unlockWindow();
+			dumpWindowInfo();
+		}
+	} else {
+//		_takeScreenShot(); // uncomment this if you want a full desktop screenshot too.
+          _lockWindow();
+          _focusWindow();
+          _wait(2000);
+          _takeScreenShot();
+          _unlockWindow();
+
+	}
+	return false;
+}
+
+function onScriptFailureDefault($e) {
+	if ($e.isBrowserNotResponding) {
+		if (!_isPhantomJS()) {
+			_lockWindow();
+            _focusWindow();
+            _wait(2000);
+            _takeScreenShot();
+            _unlockWindow();
+			dumpWindowInfo();
+		}
+	} else {
+//		_takeScreenShot(); // uncomment this if you want a full desktop screenshot too.
+		_lockWindow();
+      _focusWindow();
+      _wait(2000);
+      _takeScreenShot();
+      _unlockWindow();
+	}
+}
+
+function dumpWindowInfo() {
+	var s = "<pre>";
+	var info = _getWindows();
+	for (var i=0; i<info.length; i++) {
+		var w = info[i];
+		s += "\n-------------------\nWindow " + i + ":\n-------";
+		s += "\n  windowName: " + w.windowName;
+		s += "\n  derivedName:" + w.derivedName;
+		s += "\n  windowTitle:" + w.windowTitle;
+		s += "\n  windowURL:" + w.windowURL;
+		s += "\n  wasOpened:" + w.wasOpened + " (" + (w.wasOpened == 1 ? "popup window" : "base window") + ")";
+		s += "\n  domain:" + w.domain;
+		var initDate = new Date(parseFloat(w.initialTime));
+		var lastDate = new Date(parseFloat(w.lastTime));
+		var currentDate = new Date();
+		s += "\n  initialTime:" + initDate.toUTCString();
+		s += "\n  lastTime:" + lastDate.toUTCString();
+		s += "\n  currentTime:" + currentDate.toUTCString();
+		s += "\n  Last communication:" +  (currentDate - lastDate) + " ms ago"; 
+	}
+	s += "</pre>";
+	_sahi._log(s);
+}
+
+
+/***************************************
+	FileName	:	12TwentyKeyword_Phase3.sah
+	Description	 :   Global Variables,Testcase Functions 
+***************************************/
+
+_include("12TwentyOR_Phase3.sah");
+_include("12TwentyConfig_Phase3.sah");
+
+/**********************************************
+    Method name	 :  loginTo12Twenty
+    Author 	 	     :	venu
+    Created Date  :  2/8/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//Login to 12Twenty
+function login12Twenty($Url,$Username, $Password){
+   //Navigate to URL
+  	_navigateTo($Url);
+ 	//Read User Name 
+	_setValue(_emailbox($txt_UserName), $Username);
+  //Read Password
+	_setValue(_password($txt_Password), $Password);
+   //Click Submit Button
+	_click(_link($btn_Login));
+}
+/**********************************************
+    Method name	:  navigationToClassStatusReport
+    Author 	 	    :	Venu
+    Created Date  :   09/12/2016
+    Description		:	This method is used to navigate Class Status tab.
+    Input			  :   NA
+**********************************************/
+function navigationToClassStatusReport()
+{
+    //click on 12Twenty Reports
+	_click(_link($tab_12twenty_Reports));
+    //Click on Student Outcomes Subreport
+	_click(_link($sReportType));
+}
+/*************12Twenty Reports***************/
+var $sRunStatus;
+var $sSiteInstanceType;
+var $sSiteInstance;
+var $sReportType;
+var $sDatafileName;
+var $sGradClass;
+var $sGradTerm;
+var $sOfferTiming;
+var $sJobPhase;
+var $sWorkAuthorization;
+var $sDesiredIndustry;
+var $sIncludeRumorJobs;
+var $sIncludedReporting;
+var $sDegreeLevel;
+var $sCollege;
+var $sDepartment;
+var $sUndergradMajor;
+var $sProgram;
+var $sMBAClass;
+var $sJointdegree;
+var $sSurveyPeriod;
+var $Tabledata=[];
+var $arr=[];
+var $actual;
+var $expected;
+/**********************************************
+    Method name	 :  12TwentyReports_Baseline
+    Author 	 	     :	venu
+    Created Date  :  09/12/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//1220 Reports Baseline
+function Reports1220_Baseline($sRunStatus, $sSiteInstanceType, $sSiteInstance, $sReportType1, $sGradClass1, $sGradTerm1, $sOfferTiming1, $sJobPhase1, $sWorkAuthorization1,
+ 		$sDesiredIndustry1, $sIncludeRumorJobs1, $sIncludedReporting1, $sDegreeLevel1, $sCollege1, $sDepartment1, $sUndergradMajor1, $sProgram1,
+ 		$sMBAClass1, $sJointdegree1, $sSurveyPeriod1, $sDatafileName1)
+{  
+    $sReportType=$sReportType1;
+    $sGradClass=$sGradClass1;
+    $sGradTerm=$sGradTerm1;
+    $sOfferTiming=$sOfferTiming1;
+    $sJobPhase=$sJobPhase1;
+    $sWorkAuthorization=$sWorkAuthorization1;
+    $sDesiredIndustry=$sDesiredIndustry1;
+    $sIncludeRumorJobs=$sIncludeRumorJobs1;
+    $sIncludedReporting=$sIncludedReporting1;
+    $sDegreeLevel=$sDegreeLevel1;
+    $sCollege=$sCollege1;
+    $sDepartment=$sDepartment1;
+    $sUndergradMajor=$sUndergradMajor1;
+    $sProgram=$sProgram1;
+    $sMBAClass=$sMBAClass1;
+    $sJointdegree=$sJointdegree1;
+    $sSurveyPeriod=$sSurveyPeriod1;
+    $sDatafileName=$sDatafileName1;
+   //continue the script execution if failure occurs
+   _continueOnError();   
+    //Sections of script,marked as a separate test case
+    var $t = _testcase($sDatafileName1, "12Twenty Report Baseline Test");
+    //Start of "marked as a separate test case"
+	$t.start();      
+    //Condition for Runstatus
+    if($sRunStatus==$sRunStatusValue){
+      //condition for site instance type
+                 if($sSiteInstanceType==$scLawType) 
+                   {   
+                     	//condition for site instance
+                        if($sSiteInstance == $scUcla)
+                       {   
+                         _wait(2000);
+                          //login to UCLA Law
+                          login12Twenty($UCLA_LAW,$sUsername,$sPassword);
+                       }
+                       else
+                       {
+                         _wait(2000);
+                          //Login to GWU law 
+                          login12Twenty($GWU_LAW,$sUsername,$sPassword);
+                       }               
+                     _wait(2000);
+                      //Select filter values of LAW Site instance
+                	SelectFilterValues_12Twentyreports($sReportType, $sGradClass, $sGradTerm, $sOfferTiming, $sJobPhase, $sWorkAuthorization,
+ 																	$sDesiredIndustry, $sIncludeRumorJobs, $sIncludedReporting, $sDegreeLevel, $sCollege, $sDepartment, 
+                                                      				$sUndergradMajor, $sProgram,$sMBAClass, $sJointdegree, $sSurveyPeriod);
+                     //write into csv 
+             		WriteToCSV($sDatafileName); 
+           		 } 
+                  //Choose Site instance  as FTMBA Reports
+                  else if(_areEqual($sSiteInstanceType,$scFtmba))  
+                  {		                   
+                    if($sSiteInstance == $scHarvard)	
+                    {
+                      	    //Choose site instance type as Harvard FTMBA	
+                           login12Twenty($Harvard_FTMBA,$sUsername,$sPassword);                      	   	
+                         
+                      }
+                      else if($sSiteInstance == $scTexas)
+                      {
+                        	//Choose site instance type as Texas FTMBA  
+                      		login12Twenty($Texas_FTMBA,$sUsername,$sPassword);
+                      }
+                      else
+                      {
+                      	//Standford FTMBA
+                        login12Twenty($Standford_FTMBA,$sUsername,$sPassword);
+                      }
+                 //Select filter values of FTMBA Site instance
+                SelectFilterValues_12Twentyreports($sReportType, $sGradClass, $sGradTerm, $sOfferTiming, $sJobPhase, $sWorkAuthorization,
+ 																	$sDesiredIndustry, $sIncludeRumorJobs, $sIncludedReporting, $sDegreeLevel, $sCollege, $sDepartment, 
+                                                      				$sUndergradMajor, $sProgram,$sMBAClass, $sJointdegree, $sSurveyPeriod);                    
+                   //Write Emp Search progress Report
+                    if($sSiteInstance == $scStanford && $sReportType == $link_empProgress )
+                    {  
+                      	//Write to Temp CSV
+                        WriteInto_Standford_EmpSearch($sDatafileName);                    	
+                    }else{
+                    	//write into csv 
+             			WriteToCSV($sDatafileName); 
+                    }   
+                    
+                  }
+                  //choose site instance type as Centralized
+                  else if ($sSiteInstanceType==$scCentralized)
+                  {		
+                    	//choose site instance type as UNC centralized
+                    	if($sSiteInstance == $scUnc )
+                        {
+                         	login12Twenty($UNC_Centralized,$sUsername,$sPassword);
+                         }   
+                    	else
+                        {
+                        	//choose site instance type as Columbia centralized
+                            login12Twenty($Columbia_Centralized,$sUsername,$sPassword);
+                          
+                        }
+                    _wait(2000);
+  					SelectFiltersUNC_12Twentyreports($sReportType, $sGradClass, $sGradTerm, $sOfferTiming, $sJobPhase, $sWorkAuthorization,
+ 																$sDesiredIndustry, $sIncludeRumorJobs, $sIncludedReporting, $sDegreeLevel, $sCollege, 
+                                               					$sDepartment, $sUndergradMajor, $sProgram, $sMBAClass, $sJointdegree, $sSurveyPeriod);
+                    //write into csv along count value
+                    if($sReportType==$link_salaryStatics || $sReportType==$link_fisrDest){
+                     	var $total=_getText(_heading3($total_response));
+                        var $str_array=[[$total]];
+                        _writeCSVFile($str_array,$path_baseline+$sDatafileName+".csv");
+                        WriteToCSV($sDatafileName); 
+                    }else{
+                    //write into csv 
+             		WriteToCSV($sDatafileName); 
+                    } 
+                 }
+      			else
+                {
+                	//login into BSBA
+                    login12Twenty($Ohio_BSBA,$sUsername,$sPassword);
+                }
+  	
+             _wait(2000);     
+             
+              
+               //log for if test is passed
+            }
+            else
+            {
+               //log for if test is failed
+            }
+		$t.end();	
+  }  
+/**********************************************
+    Method name	:  SelectFilterValues_ClassStatus
+    Author 	 	    :	Venu
+    Created Date  :  09/13/16
+    Description		:	Select filter data from excel for class status (FTMBA/BSBA/UCLA_LAW)
+    Input			  : $sSiteType, $sGradYear,$sGradTerm,$sOfferTiming,$sJobPhase,$sWorkAuth,$sEmpType,$sRumorJob,$sIncludeRoport,$sDegreeleve,$sCollege,$sProgram,$sUndergradMajor,$DatafileName
+**********************************************/
+  //Select Filter data for ClassStatus Reports
+   function SelectFilterValues_12Twentyreports($sReportType, $sGradClass, $sGradTerm, $sOfferTiming, $sJobPhase, $sWorkAuthorization,
+ 																$sDesiredIndustry, $sIncludeRumorJobs, $sIncludedReporting, $sDegreeLevel, $sCollege, 
+                                               					$sDepartment, $sUndergradMajor, $sProgram, $sMBAClass, $sJointdegree, $sSurveyPeriod)
+   {
+     //click on 12Twenty Reports
+	_click(_link($tab_12twenty_Reports));
+    //Click on Student Outcomes Subreport
+	_click(_link($sReportType));
+     _wait(2000);
+     if($sSiteInstanceType == $scFtmba || $sSiteInstanceType == $scLawType){
+    //Click on Graduation Year 
+   	_click(_button($default_gradYear1));
+    _wait(2000);
+    //Select Graduation year checkbox 
+	_check(_checkbox($sGradClass));
+     _wait(2000);
+    //Uncheck the default Graduation Year 
+   _uncheck(_checkbox($default_gradYear1));
+     _wait(2000);     
+    }
+    //Select Graduation Term 
+  	_setSelected(_select($drp_dwn_gradTerm), $sGradTerm);
+      _wait(2000);
+	     //select offertiming
+    _setSelected(_select($drp_dwn_offerTimingId),$sOfferTiming);     
+     //select JobPhase 
+  	_setSelected(_select($drp_dwn_job_PhaseId), $sJobPhase);
+     //select work authorization
+    _setSelected(_select($drp_dwn_workAuthId),$sWorkAuthorization);
+     if($sSiteInstance != $scGwl){
+         //select desired industry
+         _setSelected(_select($drp_dwn_desirInd),$sDesiredIndustry);
+     } 
+     //select Include rumor job
+    _setSelected(_select($drp_dwn_rumorJob), $sIncludeRumorJobs);
+     //select include report
+    _setSelected(_select($drp_dwn_includeReport), $sIncludedReporting);
+     if($sSiteInstance==$scUnc)
+     {  
+       //Select Degree level
+       _setSelected(_select($drp_dwn_degreeId), $sDegreeLevel);
+        //Select Program 
+        _setSelected(_select($drp_dwn_program), $sProgram);
+       //Select College
+       _setSelected(_select($drp_dwn_collegeId), $sCollege);
+         //Select Department
+        //_setSelected(_select($drp_dwn_department), $sDepartment);
+       //select Undergraduate Major filter
+        _setSelected(_select($drp_dwn_underGradMajor),$sUndergradMajor);
+     } 
+     if($sSiteInstance==$scStanford){
+        //Select Program 
+        _setSelected(_select($drp_dwn_program), $sProgram);
+       //Select MBAclass 
+        _setSelected(_select($drp_dwn_mbaclass), $sMBAClass);
+       //Select Joint Degree 
+        _setSelected(_select($drp_dwn_jointdegree), $sJointdegree);
+     } 
+     if($sSiteInstance == $scGwl)
+     {
+        //Select Program 
+        _setSelected(_select($drp_dwn_program), $sProgram);
+       	//Select Desired Emp type
+        _setSelected(_select($drp_dwn_desirEmp),$sDesiredIndustry);
+     	//Select Survey Period
+      	_setSelected(_select($drp_dwn_surveyperiod), $sSurveyPeriod);
+     }
+      
+     //click on generate report
+    _click(_button($getResult));
+      _wait(2000);
+  }
+/**********************************************
+    Method name	:  SelectFiltersUNC_12Twentyreports
+    Author 	 	    :	Venu
+    Created Date  :  09/13/16
+    Description		:	Select filter data from excel for class status (UNC Centralized)
+    Input			  : $sSiteType, $sGradYear,$sGradTerm,$sOfferTiming,$sJobPhase,$sWorkAuth,$sEmpType,$sRumorJob,$sIncludeRoport,$sDegreeleve,$sCollege,$sProgram,$sUndergradMajor,$DatafileName
+**********************************************/
+  //Select Filter data for ClassStatus Reports
+   function SelectFiltersUNC_12Twentyreports($sReportType, $sGradClass, $sGradTerm, $sOfferTiming, $sJobPhase, $sWorkAuthorization,
+ 																$sDesiredIndustry, $sIncludeRumorJobs, $sIncludedReporting, $sDegreeLevel, $sCollege, 
+                                               					$sDepartment, $sUndergradMajor, $sProgram, $sMBAClass, $sJointdegree, $sSurveyPeriod)
+   {
+     //click on 12Twenty Reports
+	_click(_link($tab_12twenty_Reports));
+    //Click on Student Outcomes Subreport
+	_click(_link($sReportType));
+     _wait(2000);
+     _log($sReportType);
+     if($sReportType == $link_siteUsage || $sReportType == $link_stdOutcomes)
+     {
+    //Click on Graduation Year 
+   	_click(_button($default_gradYear1));
+    _wait(2000);
+    //Select Graduation year checkbox 
+	_check(_checkbox($sGradClass));
+     _wait(2000);
+    //Uncheck the default Graduation Year 
+   _uncheck(_checkbox($default_gradYear1));
+     _wait(2000);     
+	 //select offertiming
+    _setSelected(_select($drp_dwn_offerTimingId),$sOfferTiming);     
+     //select JobPhase 
+  	_setSelected(_select($drp_dwn_job_PhaseId), $sJobPhase);
+     //select work authorization
+    _setSelected(_select($drp_dwn_workAuthId),$sWorkAuthorization);
+     //select desired industry
+     _setSelected(_select($drp_dwn_desirInd),$sDesiredIndustry);
+     //select Include rumor job
+    _setSelected(_select($drp_dwn_rumorJob), $sIncludeRumorJobs);
+     //select include report
+    _setSelected(_select($drp_dwn_includeReport), $sIncludedReporting);    
+    //Select Program 
+        _setSelected(_select($drp_dwn_program), $sProgram);  
+       //select Undergraduate Major filter
+        _setSelected(_select($drp_dwn_underGradMajor),$sUndergradMajor);  
+     //Select Graduation Term 
+  		_setSelected(_select($drp_dwn_gradTerm), $sGradTerm);      
+       //Select Degree level
+       _setSelected(_select($drp_dwn_degreeId), $sDegreeLevel);        
+       //Select College
+       _setSelected(_select($drp_dwn_collegeId), $sCollege); 
+     //click on generate report
+    _click(_button($getResult));
+    }
+	else
+     {
+		//Select Graduation Year
+     	_setSelected(_select($drp_dwn_gradYear), $sGradClass);     
+       	//Select Graduation Term 
+  		_setSelected(_select($drp_dwn_gradTerm), $sGradTerm);      
+       	//Select Degree level
+       	_setSelected(_select($drp_dwn_degreeId), $sDegreeLevel);               
+        if($sCollege==$btn_all)
+		{
+            _log("Select Default Filter"); 
+        }
+       else
+       {
+            //click on Experience button
+            _click(_button($btn_all));		
+          //read the number of filter	
+          _click(_label($sCollege));
+          //_click(_checkbox(_label($sCollege)));      
+        }
+       if($sSiteInstance=="Major Employers by Graduates" || $sSiteInstance=="First Destination by Major")
+       {
+       		if($sProgram==$btn_all){
+            _log("Select Default Filter"); 
+        }else{
+            //click on Experience button
+            _click(_button($btn_all));		
+          //read the number of filter	
+          _click(_label($sProgram));
+          //_click(_checkbox(_label($sProgram)));      
+        }
+       }
+         _click(_submit($generateReport));
+     } 		
+      _wait(2000);
+ }
+ /**********************************************
+    Method name	:  WriteToCSV
+    Author 	 	    :	venu
+    Created Date  :  12/15/15
+    Description		:	This Method is used to get table content from UI,push into array and write into csv.
+    Input			  :   NA
+**********************************************/
+function WriteToCSV($DatafileName){
+  var $data=$DatafileName;
+  _log("Data :"+$data);
+    //get table content from ui
+	$Tabledata = _getTableContents(_table($table_id));
+    //push data into array
+    for (var $row = 0; $row < $Tabledata.length; $row++) 
+    {
+      	//assign table data into an array length
+      	$arr[$arr.length] = $Tabledata[$row];
+    }
+    //write functionality
+     Write($data);  	   	
+}
+/**********************************************
+    Method name	:  Write
+    Author 	 	    :	sarita
+    Created Date  :  12/14/15
+    Description		:	This Method is used to write into csv.
+    Input			  :   NA
+**********************************************/
+// write ui data into csv file
+  function Write($DatafileName)
+ {  
+      if(_exists($path_baseline))
+      {//condition for to check if file exists or not
+//        if(_exists($path_baseline+$DatafileName+".csv"))
+//        {	//if exists delete file
+//        	_deleteFile($path_baseline+$DatafileName+".csv");	
+//        }
+         	//write in to csv file
+         	_writeCSVFile($Tabledata,$path_baseline+$DatafileName+".csv");
+      }
+      else
+      {
+           //create a directory and write in to csv file
+           var $file = new java.io.File($sBaseline_dir).mkdir();
+           _writeCSVFile($Tabledata,$path_baseline+$DatafileName+".csv");
+      }
+  }   
+/**********************************************
+    Method name	 :  12TwentyReports_Actual
+    Author 	 	     :	venu
+    Created Date  :  09/12/2016
+    Description		:	
+    Input			  :   
+**********************************************/
+//1220 Reports Actual
+function Reports1220_Actual($sRunStatus, $sSiteInstanceType, $sSiteInstance, $sReportType1, $sGradClass1, $sGradTerm1, $sOfferTiming1, $sJobPhase1, $sWorkAuthorization1,
+ 		$sDesiredIndustry1, $sIncludeRumorJobs1, $sIncludedReporting1, $sDegreeLevel1, $sCollege1, $sDepartment1, $sUndergradMajor1, $sProgram1,
+ 		$sMBAClass1, $sJointdegree1, $sSurveyPeriod1, $sDatafileName1)
+{  
+    $sReportType=$sReportType1;
+    $sGradClass=$sGradClass1;
+    $sGradTerm=$sGradTerm1;
+    $sOfferTiming=$sOfferTiming1;
+    $sJobPhase=$sJobPhase1;
+    $sWorkAuthorization=$sWorkAuthorization1;
+    $sDesiredIndustry=$sDesiredIndustry1;
+    $sIncludeRumorJobs=$sIncludeRumorJobs1;
+    $sIncludedReporting=$sIncludedReporting1;
+    $sDegreeLevel=$sDegreeLevel1;
+    $sCollege=$sCollege1;
+    $sDepartment=$sDepartment1;
+    $sUndergradMajor=$sUndergradMajor1;
+    $sProgram=$sProgram1;
+    $sMBAClass=$sMBAClass1;
+    $sJointdegree=$sJointdegree1;
+    $sSurveyPeriod=$sSurveyPeriod1;
+    $sDatafileName=$sDatafileName1;
+   //continue the script execution if failure occurs
+   _continueOnError();   
+    //Sections of script,marked as a separate test case
+    var $t = _testcase($sDatafileName1, "12Twenty Report Actual Test");
+    //Start of "marked as a separate test case"
+	$t.start();      
+    //Condition for Runstatus
+    if($sRunStatus==$sRunStatusValue){
+      //condition for site instance type
+                 if($sSiteInstanceType==$scLawType) 
+                   {   
+                     	//condition for site instance
+                        if($sSiteInstance == $scUcla)
+                       {   
+                         _wait(2000);
+                          //login to UCLA Law
+                          login12Twenty($UCLA_LAW,$sUsername,$sPassword);
+                       }
+                       else
+                       {
+                         _wait(2000);
+                          //Login to GWU law 
+                          login12Twenty($GWU_LAW,$sUsername,$sPassword);
+                       }               
+                     _wait(2000);
+                      //Select filter values of LAW Site instance
+                	SelectFilterValues_12Twentyreports($sReportType, $sGradClass, $sGradTerm, $sOfferTiming, $sJobPhase, $sWorkAuthorization,
+ 																	$sDesiredIndustry, $sIncludeRumorJobs, $sIncludedReporting, $sDegreeLevel, $sCollege, $sDepartment, 
+                                                      				$sUndergradMajor, $sProgram,$sMBAClass, $sJointdegree, $sSurveyPeriod);
+                      //Read CSV and Verify
+             			readFromCSVAndVerify($sDatafileName); 
+                                          
+           		 } 
+                  //Choose Site instance  as FTMBA Reports
+                  else if(_areEqual($sSiteInstanceType,$scFtmba))  
+                  {		                   
+                    if($sSiteInstance == $scHarvard)	
+                    {
+                      	    //Choose site instance type as Harvard FTMBA	
+                           login12Twenty($Harvard_FTMBA,$sUsername,$sPassword);                      	   	
+                         
+                      }
+                      else if($sSiteInstance == $scTexas)
+                      {
+                        	//Choose site instance type as Texas FTMBA  
+                      		login12Twenty($Texas_FTMBA,$sUsername,$sPassword);
+                      }
+                      else
+                      {
+                      	//Standford FTMBA
+                        login12Twenty($Standford_FTMBA,$sUsername,$sPassword);
+                      }
+                 //Select filter values of FTMBA Site instance
+                SelectFilterValues_12Twentyreports($sReportType, $sGradClass, $sGradTerm, $sOfferTiming, $sJobPhase, $sWorkAuthorization,
+ 																	$sDesiredIndustry, $sIncludeRumorJobs, $sIncludedReporting, $sDegreeLevel, $sCollege, $sDepartment, 
+                                                      				$sUndergradMajor, $sProgram,$sMBAClass, $sJointdegree, $sSurveyPeriod); 
+                    //Verify Emp Search progress Report
+                    if($sSiteInstance == $scStanford && $sReportType == $link_empProgress )
+                    {  
+                      	//Write to Temp CSV
+                        	var $tableCount=_count("_table","/report-data/");
+                            _log($tableCount)
+                            //read each table data from UI  
+                            for(var $k=0;$k<$tableCount;$k++)
+                            { 
+                                //get table data
+                               $Tabledata = _getTableContents(_table($table_id+"["+$k+"]"));   
+                              var $data=$sDatafileName; 
+                               _writeCSVFile($Tabledata,$path_temp+$sDatafileName+".csv"); 
+                            }   
+                    	readAndVerify_Temp($sDatafileName);
+                    }else{
+                    	 //Read CSV and Verify
+             			readFromCSVAndVerify($sDatafileName); 
+                    }  
+                  }
+                  //choose site instance type as Centralized
+                  else if ($sSiteInstanceType==$scCentralized)
+                  {		
+                    	//choose site instance type as UNC centralized
+                    	if($sSiteInstance == $scUnc )
+                        {
+                         	login12Twenty($UNC_Centralized,$sUsername,$sPassword);
+                         }   
+                    	else
+                        {
+                        	//choose site instance type as Columbia centralized
+                            login12Twenty($Columbia_Centralized,$sUsername,$sPassword);
+                          
+                        }
+                    _wait(2000);
+  					SelectFiltersUNC_12Twentyreports($sReportType, $sGradClass, $sGradTerm, $sOfferTiming, $sJobPhase, $sWorkAuthorization,
+ 																$sDesiredIndustry, $sIncludeRumorJobs, $sIncludedReporting, $sDegreeLevel, $sCollege, 
+                                               					$sDepartment, $sUndergradMajor, $sProgram, $sMBAClass, $sJointdegree, $sSurveyPeriod);
+                    //verify UNC-salary Statistics and First Dest
+                    if($sReportType==$link_salaryStatics || $sReportType==$link_fisrDest){
+                     	var $total=_getText(_heading3($total_response));
+                        var $str_array=[[$total]];
+                        _writeCSVFile($str_array,$path_temp+$sDatafileName+".csv");
+                       var $result_temp = _getTableContents(_table($table_id)); 
+                       _writeCSVFile($result_temp,$path_temp+$sDatafileName+".csv");
+                       readAndVerify_Temp($sDatafileName);
+                     } 
+                    else
+                    {
+                    	 //Read CSV and Verify
+             			readFromCSVAndVerify($sDatafileName); 
+                    } 
+                 }
+      			else
+                {
+                	//login into BSBA
+                    login12Twenty($Ohio_BSBA,$sUsername,$sPassword);
+                }
+                 if(_fileExists($path_actual+$sDatafileName+".csv"))
+                  {
+
+                    _writeFile("\n Graduation class:"+$sGradClass+","+"\n Graduation term:"+$sGradTerm+","+"\n Offer timing:"+$sOfferTiming+","+"\n Job phase:"+$sJobPhase+","+"\n Work authorization:"+$sWorkAuthorization+","+
+                               "\n Desired Industry:"+$sDesiredIndustry+","+"\n Include rumor jobs:"+$sIncludeRumorJobs+","+"\n Include reporting:"+$sIncludedReporting+","+"Degree level:"+$sDegreeLevel+","+
+                               "\n College:"+$sCollege+","+"\n Department:"+$sDepartment+","+"\n Under graduation major:"+$sUndergradMajor+","+"\n Program:"+$sProgram+","+"MBA class:"+$sMBAClass+","+
+                               "\n joint degree:"+$sJointdegree+","+"Survey periode:"+$sSurveyPeriod+","+"\n Datafile Name:"+$sDatafileName,$path_actual+$sDatafileName+".csv");
+                  }  	
+             _wait(2000);     
+            
+              
+               //log for if test is passed
+            }
+            else
+            {
+               //log for if test is failed
+            }
+		$t.end();	
+  }  
+/**********************************************
+    Method name	:  readFromCSVAndVerify
+    Author 	 	    :	venu
+    Created Date  :  12/15/15
+    Description		:	This Method is used to get table content from UI,read baseline file and verify.
+    Input			  :   NA
+**********************************************/
+//read data from ui and verify with csv
+function readFromCSVAndVerify($DatafileName){
+     var $data=$DatafileName; 
+    //get data from UI
+	//var $actual1 = _getTableContents(_table($table_id));
+	$actual =  _getTableContents(_table($table_id));
+    //get data from CSV
+	//var $expected1 = _readCSVFile($path_baseline+$DatafileName+".csv", "," );
+	$expected =_readCSVFile($path_baseline+$DatafileName+".csv", "," );
+	_log("Case Insensitive:"+$actual+":"+$expected);
+    //verify functionality 
+    Verify($data);
+}
+/**********************************************
+    Method name	:  Verify
+    Author 	 	    :	sarita
+    Created Date  :  12/14/15
+    Description		:	This Method is used to Verify.
+    Input			  :   NA
+**********************************************/
+//verify functionality
+function Verify($sDatafileName){  
+  	//Iterate the loop to verify Actual and Expecetd results base d on rows and columns
+	for (var $i=0; $i<$actual.length && $i<$expected.length; $i++){
+			for (var $j=0; $j<$actual[$i].length && $j<$expected[$i].length; $j++)
+	        {	//verify actual data equal to expected data
+				if($actual[$i][$j]==$expected[$i][$j])
+	            {
+                  _log("Expected: " + $expected[$i][$j]+"Actual: "+$actual[$i][$j]);
+			     }
+	          else
+	            {
+                  //condition for if file exits or not
+                  if(_fileExists($path_actual+$sDatafileName+".csv"))
+                  {
+                     //update data if error occurs
+                     updateOnError($i,$j,$actual[$i][$j], $expected[$i][$j]);
+                  }
+                  else
+                  {
+                      //create a directory
+                      var $file = new java.io.File($sAcual_dir).mkdir();
+                        //copy source file to destination file
+                      _copyFile($path_baseline+$sDatafileName+".csv", $path_actual+$sDatafileName+".csv");
+                    //update data if any errors occured 
+                    updateOnError($i,$j,$actual[$i][$j], $expected[$i][$j]);
+                    //compare baseline ,actual if failure occurs to continue call onScriptFailure.
+                   _assertEqual($actual[$i][$j],$expected[$i][$j]);
+                  }
+	              _log("Verificaton failed :=Expected data in failed test case " + $expected[$i][$j]+"Actual "+$actual[$i][$j]);
+	           }
+             	// _assertEqual($actual[$i][$j],$expected[$i][$j]);
+	              _log("Expected: " + $expected[$i][$j]+"Actual "+$actual[$i][$j]);  
+	    }
+	}
+}
+/**********************************************
+    Method name	:  updateOnError
+    Author 	 	    :	sarita
+    Created Date  :  12/15/15
+    Description		:	This Method is used to update error data.
+    Input			  :   NA
+**********************************************/
+//update csv if data varied
+function updateOnError($x,$y,$actualData,$expectedData)
+{
+ //read csv actual file 
+ var $a=_readCSVFile($path_actual+$sDatafileName+".csv");
+  //update data actual data and expeted data
+  $a[$x][$y] = $actualData+"***"+$expectedData;
+  //write into actual file
+  _writeCSVFile($a,$path_actual+$sDatafileName+".csv",true);
+  
+}
+
+/**********************************************
+    Method name	:  onScriptFailure
+    Author 	 	    :	sarita
+    Created Date  :  12/15/15
+    Description		:	This Method is used to continue verify data if failure occurs.
+    Input			  :   NA
+**********************************************/
+//continue the verify functionality if failure error occured
+function onScriptFailure($e)
+{
+   //_logExceptionAsFailure($e);
+   _log("Script failing for Report:"+$sDatafileName+".csv");
+   return true; // Forces Sahi to continue execution and not stop at error. Since Sahi Pro V4.3
+}
+/**********************************************
+    Method name	:  readAndVerify_BWR_Salary
+    Author 	 	    :	venu
+    Created Date  :  12/23/15
+    Description		:	This Method is used to verify BWR reports from Q.83-Q.87.
+    Input			  :   NA
+**********************************************/
+//read BWR_salary reports
+function readAndVerify_Temp($sDatafileName)
+{  	
+  	var $data=$sDatafileName;
+  	//Get table data from UI
+    $actual = _getTableContents(_table($table_id));      
+  	//read csv file data 
+	$expected =_readCSVFile($path_baseline+$sDatafileName+".csv", "," );
+    //verify
+    Verify($data);	
+}
+/**********************************************
+    Method name	:  WriteInto_Standford_EmpSearch
+    Author 	 	    :	venu
+    Created Date  :  09/13/16
+    Description		:	
+    Input			  :   
+**********************************************/
+//default table id
+
+//write mba standard reports into csv
+function WriteInto_Standford_EmpSearch($sDatafileName)
+{        		
+     	 //fetch no.of tables
+      	var $tableCount=_count("_table","/report-data/");
+      	_log($tableCount)
+        //read each table data from UI  
+        for(var $k=0;$k<$tableCount;$k++)
+        { 
+            //get table data
+           $Tabledata = _getTableContents(_table($table_id+"["+$k+"]"));   
+           _writeCSVFile($Tabledata,$path_baseline+$sDatafileName+".csv"); 
+        }   
+}
